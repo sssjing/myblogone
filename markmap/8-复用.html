@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.14.4/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.7.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.14.4"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.14.4/dist/index.umd.min.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root, jsonOptions) => {
+        const markmap = getMarkmap();
+        window.mm = markmap.Markmap.create('svg#mindmap', (getOptions || markmap.deriveOptions)(jsonOptions), root);
+      })(() => window.markmap,null,{"type":"heading","depth":0,"payload":{"lines":[0,1]},"content":"复用","children":[{"type":"heading","depth":1,"payload":{"lines":[2,3]},"content":"如何复用","children":[{"type":"heading","depth":2,"payload":{"lines":[4,5]},"content":"组合 composition","children":[{"type":"heading","depth":3,"payload":{"lines":[6,7]},"content":"新类中使用现有类"}]},{"type":"heading","depth":2,"payload":{"lines":[8,9]},"content":"继承 inheritance","children":[{"type":"heading","depth":3,"payload":{"lines":[10,11]},"content":"按照现有类型进行复用"},{"type":"heading","depth":3,"payload":{"lines":[11,12]},"content":"调用导出类，先加载基类"},{"type":"heading","depth":3,"payload":{"lines":[12,13]},"content":"@Override","children":[{"type":"heading","depth":4,"payload":{"lines":[13,14]},"content":"确保覆盖，而非重载"}]}]},{"type":"heading","depth":2,"payload":{"lines":[15,16]},"content":"代理 proxy","children":[{"type":"heading","depth":3,"payload":{"lines":[16,17]},"content":"继承和组合的中庸之道"},{"type":"heading","depth":3,"payload":{"lines":[17,18]},"content":"成员对象 -&gt;构造的类中（组合）"},{"type":"heading","depth":3,"payload":{"lines":[18,19]},"content":"在新类中暴露成员对象的所有方法（继承）"}]}]},{"type":"heading","depth":1,"payload":{"lines":[20,21]},"content":"组合vs继承","children":[{"type":"heading","depth":2,"payload":{"lines":[21,22]},"content":"组合 has-a","children":[{"type":"heading","depth":3,"payload":{"lines":[22,23]},"content":"显式：在新类中放置子对象"},{"type":"heading","depth":3,"payload":{"lines":[23,24]},"content":"复用具体实现，而非接口"}]},{"type":"heading","depth":2,"payload":{"lines":[24,25]},"content":"继承 is-a","children":[{"type":"heading","depth":3,"payload":{"lines":[25,26]},"content":"隐式：在新类中放置子对象"},{"type":"heading","depth":3,"payload":{"lines":[26,27]},"content":"新类-&gt;基类，复用接口"},{"type":"heading","depth":3,"payload":{"lines":[27,28]},"content":"向上转型","children":[{"type":"heading","depth":4,"payload":{"lines":[28,29]},"content":"新类是现有类的一种类型"},{"type":"heading","depth":4,"payload":{"lines":[29,30]},"content":"类接口可能丢失方法"}]}]}]},{"type":"heading","depth":1,"payload":{"lines":[32,33]},"content":"final关键字","children":[{"type":"heading","depth":2,"payload":{"lines":[34,35]},"content":"数据","children":[{"type":"heading","depth":3,"payload":{"lines":[36,37]},"content":"基本类型"},{"type":"heading","depth":3,"payload":{"lines":[37,38]},"content":"引用","children":[{"type":"heading","depth":4,"payload":{"lines":[38,39]},"content":"引用不可变"},{"type":"heading","depth":4,"payload":{"lines":[39,40]},"content":"引用指向对象的内容，可变"}]},{"type":"heading","depth":3,"payload":{"lines":[40,41]},"content":"参数","children":[{"type":"heading","depth":4,"payload":{"lines":[41,42]},"content":"无法改变参数所指向的对象"}]}]},{"type":"heading","depth":2,"payload":{"lines":[43,44]},"content":"方法","children":[{"type":"heading","depth":3,"payload":{"lines":[44,45]},"content":"防止继承类覆盖"},{"type":"heading","depth":3,"payload":{"lines":[45,46]},"content":"private方法隐式的为final的","children":[{"type":"heading","depth":4,"payload":{"lines":[46,47]},"content":"无法获取=无法覆盖"}]}]},{"type":"heading","depth":2,"payload":{"lines":[48,49]},"content":"类","children":[{"type":"heading","depth":3,"payload":{"lines":[50,51]},"content":"无法被继承"},{"type":"heading","depth":3,"payload":{"lines":[52,53]},"content":"java的final类","children":[{"type":"heading","depth":4,"payload":{"lines":[54,55]},"content":"基本类型的包装类"},{"type":"heading","depth":4,"payload":{"lines":[56,57]},"content":"字符串","children":[{"type":"heading","depth":5,"payload":{"lines":[58,59]},"content":"String"},{"type":"heading","depth":5,"payload":{"lines":[59,60]},"content":"StringBuilder"},{"type":"heading","depth":5,"payload":{"lines":[60,61]},"content":"StringBuffer"}]},{"type":"heading","depth":4,"payload":{"lines":[62,63]},"content":"数学","children":[{"type":"heading","depth":5,"payload":{"lines":[64,65]},"content":"Math"},{"type":"heading","depth":5,"payload":{"lines":[65,66]},"content":"StricMath"}]},{"type":"heading","depth":4,"payload":{"lines":[67,68]},"content":"系统","children":[{"type":"heading","depth":5,"payload":{"lines":[69,70]},"content":"System"},{"type":"heading","depth":5,"payload":{"lines":[70,71]},"content":"Class"}]}]}]}]}]},{})</script>
+</body>
+</html>

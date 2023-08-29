@@ -1,0 +1,1 @@
+import{_ as r}from"./framework-c27b6911.js";import{o as t,c as o,a}from"./app-beffe7bc.js";const c={},s=["src"];function _(e,n){return t(),o("div",null,[a("iframe",{src:e.$withBase("/markmap/8-复用.html"),width:"100%",height:"400",frameborder:"0",scrolling:"No",leftmargin:"0",topmargin:"0"},null,8,s)])}const i=r(c,[["render",_],["__file","8-复用.html.vue"]]);export{i as default};
