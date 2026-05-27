@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="generator" content="VuePress 2.0.0-beta.61" />
+<meta name="theme" content="VuePress Theme Hope" />
+<meta property="og:url" content="https://github.com/sssjing/myblogone/myblogone/posts/ai-agent/"><meta property="og:title" content="AI Agent"><meta property="og:description" content="AI Agent 知识体系：从基础概念到框架实战，涵盖 ReAct、Function Calling、记忆系统、规划能力、Multi-Agent 等核心知识点"><meta property="og:type" content="website"><meta property="og:locale" content="zh-CN"><link rel="icon" href="/myblogone/favicon2.ico"><title>AI Agent</title><meta name="description" content="AI Agent 知识体系">
+<style>:root{--bg-color:#fff}html[data-theme="dark"]{--bg-color:#1d1e1f}html,body{background:var(--bg-color)}</style>
+<script>const userMode=localStorage.getItem("vuepress-theme-hope-scheme");const systemDarkMode=window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches;if(userMode==="dark"||(userMode!=="light"&&systemDarkMode)){document.documentElement.setAttribute("data-theme","dark")}</script>
+<link rel="preload" href="/myblogone/assets/style-d206297f.css" as="style"><link rel="stylesheet" href="/myblogone/assets/style-d206297f.css">
+<link rel="modulepreload" href="/myblogone/assets/app-beffe7bc.js"><link rel="modulepreload" href="/myblogone/assets/framework-c27b6911.js">
+</head>
+<body>
+<div id="app"><a href="#main-content" class="skip-link sr-only">跳至主要內容</a><div class="theme-container no-sidebar has-toc">
+<header class="navbar" id="navbar"><div class="navbar-start"><button type="button" class="toggle-sidebar-button" title="Toggle Sidebar"><span class="icon"></span></button><a href="/myblogone/" class="brand"><img class="logo" src="/myblogone/logo2.png" alt></a></div><div class="navbar-center"><nav class="nav-links"><div class="nav-item hide-in-mobile"><a href="/myblogone/" class="nav-link" aria-label="My Blog"><span class="font-icon icon iconfont icon-Home" style=""></span>My Blog</a></div><div class="nav-item hide-in-mobile"><a href="/myblogone/posts/%E4%B8%AA%E4%BA%BA%E8%84%9A%E6%9C%AC/%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E7%BB%8F%E7%BA%AC%E5%BA%A6.html" class="nav-link" aria-label="脚本"><span class="font-icon icon iconfont icon-java" style=""></span>脚本</a></div><div class="nav-item hide-in-mobile"><a href="/myblogone/posts/Java/JVM/1.html" class="nav-link" aria-label="Java"><span class="font-icon icon iconfont icon-java" style=""></span>Java</a></div><div class="nav-item hide-in-mobile"><a href="/myblogone/posts/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%A6%E9%80%8FSpring/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9ASpring%20Framework%E4%B8%AD%E7%9A%84IoC%E5%AE%B9%E5%99%A8.html" class="nav-link" aria-label="读书笔记"><span class="font-icon icon iconfont icon-book" style=""></span>读书笔记</a></div><div class="nav-item hide-in-mobile"><a href="/myblogone/posts/ai-agent/" class="router-link-active router-link-exact-active nav-link active" aria-label="AI Agent" aria-current="page"><span class="font-icon icon iconfont icon-category" style=""></span>AI Agent</a></div><div class="nav-item hide-in-mobile"><a href="/myblogone/category" class="nav-link" aria-label="分类"><span class="font-icon icon iconfont icon-category" style=""></span>分类</a></div><div class="nav-item hide-in-mobile"><a href="https://www.bilibili.com/" rel="noopener noreferrer" target="_blank" aria-label="Bilibili" class="nav-link"><span class="font-icon icon iconfont icon-bilibili" style=""></span>Bilibili<span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span></a></div></nav></div><div class="navbar-end"><button type="button" class="search-pro-button" role="search" aria-label="搜索"><svg xmlns="http://www.w3.org/2000/svg" class="icon search-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="search icon"><path d="M192 480a256 256 0 1 1 512 0 256 256 0 0 1-512 0m631.776 362.496-143.2-143.168A318.464 318.464 0 0 0 768 480c0-176.736-143.264-320-320-320S128 303.264 128 480s143.264 320 320 320a318.016 318.016 0 0 0 184.16-58.592l146.336 146.368c12.512 12.48 32.768 12.48 45.28 0 12.48-12.512 12.48-32.768 0-45.28"></path></svg><div class="placeholder">搜索</div><div class="key-hints"><kbd class="key">Ctrl</kbd><kbd class="key">K</kbd></div></button><button type="button" class="toggle-navbar-button" aria-label="Toggle Navbar" aria-expanded="false" aria-controls="nav-screen"><span class="button-container"><span class="button-top"></span><span class="button-middle"></span><span class="button-bottom"></span></span></button></div></header>
+<main class="page" id="main-content">
+<div class="page-title">
+<h1><span class="font-icon icon iconfont icon-category" style=""></span>AI Agent 知识体系</h1>
+<div class="page-info"><span class="page-author-info" aria-label="作者🖊" data-balloon-pos="down"><svg xmlns="http://www.w3.org/2000/svg" class="icon author-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="author icon"><path d="M649.6 633.6c86.4-48 147.2-144 147.2-249.6 0-160-128-288-288-288s-288 128-288 288c0 108.8 57.6 201.6 147.2 249.6-121.6 48-214.4 153.6-240 288-3.2 9.6 0 19.2 6.4 25.6 3.2 9.6 12.8 12.8 22.4 12.8h704c9.6 0 19.2-3.2 25.6-12.8 6.4-6.4 9.6-16 6.4-25.6-25.6-134.4-121.6-240-243.2-288z"></path></svg><span><a class="page-author-item" href="https://github.com/sssjing/myblogone" target="_blank" rel="noopener noreferrer">杨景</a></span></span></div>
+<hr>
+</div>
+<div class="theme-hope-content">
+<p>从基础概念到框架实战，系统学习 AI Agent 开发。内容涵盖 Agent 架构、ReAct 模式、Function Calling、记忆系统、规划能力、主流框架对比以及面试准备。</p>
+
+<h2 id="入门基础" tabindex="-1"><a class="header-anchor" href="#入门基础" aria-hidden="true">#</a> 入门基础</h2>
+<ul class="article-list">
+<li class="article-item">
+<div class="article">
+<h3><a href="/myblogone/posts/ai-agent/agent-basics.html">AI Agent 基础概念</a></h3>
+<p>什么是 AI Agent？Agent 的核心架构（Planning + Memory + Tool Use）、Agency Level 分级、发展历程与应用场景。基于 Lilian Weng 博客和李宏毅课程笔记整理。</p>
+<div class="article-meta">
+<span class="article-date">2025-05-27</span>
+<span class="article-reading-time">约 8 分钟</span>
+</div>
+</div>
+</li>
+<li class="article-item">
+<div class="article">
+<h3><a href="/myblogone/posts/ai-agent/react-pattern.html">ReAct 模式与 Agent 架构</a></h3>
+<p>从 Chain-of-Thought 到 ReAct 的演进，Thought-Action-Observation 循环详解，Anthropic 五大工作流模式（Prompt Chaining、Routing、Parallelization、Orchestrator-Workers、Evaluator-Optimizer）。</p>
+<div class="article-meta">
+<span class="article-date">2025-05-27</span>
+<span class="article-reading-time">约 10 分钟</span>
+</div>
+</div>
+</li>
+</ul>
+
+<h2 id="核心能力" tabindex="-1"><a class="header-anchor" href="#核心能力" aria-hidden="true">#</a> 核心能力</h2>
+<ul class="article-list">
+<li class="article-item">
+<div class="article">
+<h3><a href="/myblogone/posts/ai-agent/tool-use.html">Function Calling 与工具使用</a></h3>
+<p>Function Calling 工作原理、工具描述设计、工具过多时的 RAG 检索方案、工具结果校准、MCP 协议介绍。基于李宏毅课程笔记和 Toolformer、HuggingGPT 论文整理。</p>
+<div class="article-meta">
+<span class="article-date">2025-05-27</span>
+<span class="article-reading-time">约 8 分钟</span>
+</div>
+</div>
+</li>
+<li class="article-item">
+<div class="article">
+<h3><a href="/myblogone/posts/ai-agent/memory-planning.html">记忆系统与规划能力</a></h3>
+<p>Agent 记忆系统设计（短期记忆、长期记忆、反思模块）、向量检索算法（LSH、HNSW、FAISS）、规划能力评估（PlanBench、TravelPlanner）与优化策略。</p>
+<div class="article-meta">
+<span class="article-date">2025-05-27</span>
+<span class="article-reading-time">约 10 分钟</span>
+</div>
+</div>
+</li>
+</ul>
+
+<h2 id="框架实战" tabindex="-1"><a class="header-anchor" href="#框架实战" aria-hidden="true">#</a> 框架实战</h2>
+<ul class="article-list">
+<li class="article-item">
+<div class="article">
+<h3><a href="/myblogone/posts/ai-agent/frameworks.html">AI Agent 框架对比</a></h3>
+<p>全面对比 LangChain/LangGraph、CrewAI、AutoGen、MetaGPT、AutoGPT 等主流框架的特点、优劣势和适用场景，帮助开发者选择合适的 Agent 开发框架。</p>
+<div class="article-meta">
+<span class="article-date">2025-05-27</span>
+<span class="article-reading-time">约 12 分钟</span>
+</div>
+</div>
+</li>
+</ul>
+
+<h2 id="面试准备" tabindex="-1"><a class="header-anchor" href="#面试准备" aria-hidden="true">#</a> 面试准备</h2>
+<ul class="article-list">
+<li class="article-item">
+<div class="article">
+<h3><a href="/myblogone/posts/ai-agent/interview-guide.html">AI Agent 面经与面试题</a></h3>
+<p>高频面试题整理：Agent 与 Chatbot 的区别、RAG vs Fine-tuning 选择、Function Calling 原理、Multi-Agent 优缺点、Agent 安全性问题、评估方法等核心知识点。</p>
+<div class="article-meta">
+<span class="article-date">2025-05-27</span>
+<span class="article-reading-time">约 15 分钟</span>
+</div>
+</div>
+</li>
+</ul>
+
+<h2 id="推荐阅读" tabindex="-1"><a class="header-anchor" href="#推荐阅读" aria-hidden="true">#</a> 推荐阅读</h2>
+<ul>
+<li><a href="https://lilianweng.github.io/posts/2023-06-23-agent/" target="_blank" rel="noopener noreferrer">LLM Powered Autonomous Agents - Lilian Weng</a> - Agent 领域最经典的博客文章</li>
+<li><a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener noreferrer">Building Effective Agents - Anthropic</a> - Anthropic 官方 Agent 开发指南</li>
+<li><a href="https://plmsmile.github.io/posts/llm/agent/basic/01-lhy-agent-notes.html" target="_blank" rel="noopener noreferrer">AI Agent 基础 - 李宏毅课程笔记</a> - 中文 Agent 入门笔记</li>
+<li><a href="https://github.com/e2b-dev/awesome-ai-agents" target="_blank" rel="noopener noreferrer">awesome-ai-agents - GitHub</a> - 最全的 AI Agent 资源列表</li>
+<li><a href="https://github.com/langchain-ai/langchain" target="_blank" rel="noopener noreferrer">LangChain - GitHub</a> - 最流行的 LLM 应用开发框架</li>
+<li><a href="https://github.com/crewAIInc/crewAI" target="_blank" rel="noopener noreferrer">CrewAI - GitHub</a> - 多 Agent 协作框架</li>
+<li><a href="https://github.com/microsoft/autogen" target="_blank" rel="noopener noreferrer">AutoGen - Microsoft</a> - 微软多 Agent 对话框架</li>
+<li><a href="https://github.com/geekan/MetaGPT" target="_blank" rel="noopener noreferrer">MetaGPT - GitHub</a> - 多 Agent 虚拟软件公司</li>
+</ul>
+
+</div>
+<footer class="page-meta"><div class="meta-item git-info"></div></footer>
+</main>
+<footer class="footer-wrapper"><div class="footer">默认页脚</div><div class="copyright">Copyright © 2023 杨景</div></footer>
+</div></div>
+<script type="module" src="/myblogone/assets/app-beffe7bc.js" defer></script>
+</body>
+</html>

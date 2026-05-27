@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="generator" content="VuePress 2.0.0-beta.61" />
+<meta name="theme" content="VuePress Theme Hope" />
+<meta property="og:url" content="https://github.com/sssjing/myblogone/myblogone/posts/ai-agent/memory-planning.html"><meta property="og:title" content="记忆系统与规划能力"><meta property="og:description" content="深入解析AI Agent的记忆系统设计与规划能力，包括短期记忆、长期记忆、反思机制、任务分解与Plan-and-Execute模式"><meta property="og:type" content="article"><meta property="og:locale" content="zh-CN"><meta property="article:author" content="杨景"><meta property="article:published_time" content="2025-05-27T00:00:00.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"记忆系统与规划能力","image":[""],"datePublished":"2025-05-27T00:00:00.000Z","dateModified":null,"author":[{"@type":"Person","name":"杨景","url":"https://github.com/sssjing/myblogone","email":"yangjing_202103@163.com"}]}</script><link rel="icon" href="/myblogone/favicon2.ico"><title>记忆系统与规划能力</title><meta name="description" content="深入解析AI Agent的记忆系统设计与规划能力">
+<style>:root{--bg-color:#fff}html[data-theme="dark"]{--bg-color:#1d1e1f}html,body{background:var(--bg-color)}</style>
+<script>const userMode=localStorage.getItem("vuepress-theme-hope-scheme");const systemDarkMode=window.matchMedia&&window.matchMedia("(prefers-color-scheme:dark)").matches;if(userMode==="dark"||(userMode!=="light"&&systemDarkMode)){document.documentElement.setAttribute("data-theme","dark")}</script>
+<link rel="preload" href="/myblogone/assets/style-d206297f.css" as="style"><link rel="stylesheet" href="/myblogone/assets/style-d206297f.css">
+<link rel="modulepreload" href="/myblogone/assets/app-beffe7bc.js"><link rel="modulepreload" href="/myblogone/assets/framework-c27b6911.js">
+</head>
+<body>
+<div id="app"><a href="#main-content" class="skip-link sr-only">跳至主要內容</a><div class="theme-container has-toc">
+<header class="navbar" id="navbar"><div class="navbar-start"><button type="button" class="toggle-sidebar-button" title="Toggle Sidebar"><span class="icon"></span></button><a href="/myblogone/" class="brand"><img class="logo" src="/myblogone/logo2.png" alt></a></div><div class="navbar-center"><nav class="nav-links"><div class="nav-item hide-in-mobile"><a href="/myblogone/" class="nav-link" aria-label="My Blog"><span class="font-icon icon iconfont icon-Home" style=""></span>My Blog</a></div><div class="nav-item hide-in-mobile"><a href="/myblogone/posts/%E4%B8%AA%E4%BA%BA%E8%84%9A%E6%9C%AC/%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E7%BB%8F%E7%BA%AC%E5%BA%A6.html" class="nav-link" aria-label="脚本"><span class="font-icon icon iconfont icon-java" style=""></span>脚本</a></div><div class="nav-item hide-in-mobile"><a href="/myblogone/posts/Java/JVM/1.html" class="nav-link" aria-label="Java"><span class="font-icon icon iconfont icon-java" style=""></span>Java</a></div><div class="nav-item hide-in-mobile"><a href="/myblogone/posts/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%A6%E9%80%8FSpring/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9ASpring%20Framework%E4%B8%AD%E7%9A%84IoC%E5%AE%B9%E5%99%A8.html" class="nav-link" aria-label="读书笔记"><span class="font-icon icon iconfont icon-book" style=""></span>读书笔记</a></div><div class="nav-item hide-in-mobile"><a href="/myblogone/posts/ai-agent/" class="nav-link active" aria-label="AI Agent"><span class="font-icon icon iconfont icon-category" style=""></span>AI Agent</a></div><div class="nav-item hide-in-mobile"><a href="/myblogone/category" class="nav-link" aria-label="分类"><span class="font-icon icon iconfont icon-category" style=""></span>分类</a></div><div class="nav-item hide-in-mobile"><a href="https://www.bilibili.com/" rel="noopener noreferrer" target="_blank" aria-label="Bilibili" class="nav-link"><span class="font-icon icon iconfont icon-bilibili" style=""></span>Bilibili<span><svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg><span class="external-link-icon-sr-only">open in new window</span></span></a></div></nav></div><div class="navbar-end"><button type="button" class="search-pro-button" role="search" aria-label="搜索"><svg xmlns="http://www.w3.org/2000/svg" class="icon search-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="search icon"><path d="M192 480a256 256 0 1 1 512 0 256 256 0 0 1-512 0m631.776 362.496-143.2-143.168A318.464 318.464 0 0 0 768 480c0-176.736-143.264-320-320-320S128 303.264 128 480s143.264 320 320 320a318.016 318.016 0 0 0 184.16-58.592l146.336 146.368c12.512 12.48 32.768 12.48 45.28 0 12.48-12.512 12.48-32.768 0-45.28"></path></svg><div class="placeholder">搜索</div><div class="key-hints"><kbd class="key">Ctrl</kbd><kbd class="key">K</kbd></div></button><button type="button" class="toggle-navbar-button" aria-label="Toggle Navbar" aria-expanded="false" aria-controls="nav-screen"><span class="button-container"><span class="button-top"></span><span class="button-middle"></span><span class="button-bottom"></span></span></button></div></header>
+<aside class="sidebar" id="sidebar"><ul class="sidebar-links"><li><a href="/myblogone/" class="nav-link sidebar-link sidebar-page" aria-label="My Blog"><span class="font-icon icon iconfont icon-Home" style=""></span>My Blog</a></li><li><section class="sidebar-group"><button class="sidebar-heading clickable active" type="button"><span class="font-icon icon iconfont icon-category" style=""></span><span class="title">AI Agent</span><span class="arrow down"></span></button><ul class="sidebar-links"><li><a href="/myblogone/posts/ai-agent/agent-basics.html" class="nav-link sidebar-link sidebar-page" aria-label="AI Agent 基础概念">AI Agent 基础概念</a></li><li><a href="/myblogone/posts/ai-agent/react-pattern.html" class="nav-link sidebar-link sidebar-page" aria-label="ReAct 模式与 Agent 架构">ReAct 模式与 Agent 架构</a></li><li><a href="/myblogone/posts/ai-agent/tool-use.html" class="nav-link sidebar-link sidebar-page" aria-label="Function Calling 与工具使用">Function Calling 与工具使用</a></li><li><a href="/myblogone/posts/ai-agent/memory-planning.html" class="nav-link sidebar-link sidebar-page active" aria-label="记忆系统与规划能力">记忆系统与规划能力</a></li><li><a href="/myblogone/posts/ai-agent/frameworks.html" class="nav-link sidebar-link sidebar-page" aria-label="AI Agent 框架对比">AI Agent 框架对比</a></li><li><a href="/myblogone/posts/ai-agent/interview-guide.html" class="nav-link sidebar-link sidebar-page" aria-label="AI Agent 面经与面试题">AI Agent 面经与面试题</a></li></ul></section></li></ul></aside>
+<main class="page" id="main-content"><nav class="breadcrumb disable"></nav><div class="page-title"><h1><span class="font-icon icon iconfont icon-category" style=""></span>记忆系统与规划能力</h1><div class="page-info"><span class="page-author-info" aria-label="作者🖊" data-balloon-pos="down"><svg xmlns="http://www.w3.org/2000/svg" class="icon author-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="author icon"><path d="M649.6 633.6c86.4-48 147.2-144 147.2-249.6 0-160-128-288-288-288s-288 128-288 288c0 108.8 57.6 201.6 147.2 249.6-121.6 48-214.4 153.6-240 288-3.2 9.6 0 19.2 6.4 25.6 3.2 9.6 12.8 12.8 22.4 12.8h704c9.6 0 19.2-3.2 25.6-12.8 6.4-6.4 9.6-16 6.4-25.6-25.6-134.4-121.6-240-243.2-288z"></path></svg><span><a class="page-author-item" href="https://github.com/sssjing/myblogone" target="_blank" rel="noopener noreferrer">杨景</a></span></span><span class="page-date-info" aria-label="写作日期📅" data-balloon-pos="down"><svg xmlns="http://www.w3.org/2000/svg" class="icon calendar-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="calendar icon"><path d="M716.4 110.137c0-18.753-14.72-33.473-33.472-33.473-18.753 0-33.473 14.72-33.473 33.473v33.473h66.993v-33.473zm-334.87 0c0-18.753-14.72-33.473-33.473-33.473s-33.52 14.72-33.52 33.473v33.473h66.993v-33.473zm468.81 33.52H716.4v100.465c0 18.753-14.72 33.473-33.472 33.473a33.145 33.145 0 01-33.473-33.473V143.657H381.53v100.465c0 18.753-14.72 33.473-33.473 33.473a33.145 33.145 0 01-33.473-33.473V143.657H180.6A134.314 134.314 0 0046.66 277.595v535.756A134.314 134.314 0 00180.6 947.289h669.74a134.36 134.36 0 00133.94-133.938V277.595a134.314 134.314 0 00-133.94-133.938zm33.473 267.877H147.126a33.145 33.145 0 01-33.473-33.473c0-18.752 14.72-33.473 33.473-33.473h736.687c18.752 0 33.472 14.72 33.472 33.473a33.145 33.145 0 01-33.472 33.473z"></path></svg><span>2025-05-27</span></span><span class="page-reading-time-info" aria-label="阅读时间⌛" data-balloon-pos="down"><svg xmlns="http://www.w3.org/2000/svg" class="icon timer-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="timer icon"><path d="M799.387 122.15c4.402-2.978 7.38-7.897 7.38-13.463v-1.165c0-8.933-7.38-16.312-16.312-16.312H256.33c-8.933 0-16.311 7.38-16.311 16.312v1.165c0 5.825 2.977 10.874 7.637 13.592 4.143 194.44 97.22 354.963 220.201 392.763-122.204 37.542-214.893 196.511-220.2 389.397-4.661 5.049-7.638 11.651-7.638 19.03v5.825h566.49v-5.825c0-7.379-2.849-13.981-7.509-18.9-5.049-193.016-97.867-351.985-220.2-389.527 123.24-37.67 216.446-198.453 220.588-392.892zM531.16 450.445v352.632c117.674 1.553 211.787 40.778 211.787 88.676H304.097c0-48.286 95.149-87.382 213.728-88.676V450.445c-93.077-3.107-167.901-81.297-167.901-177.093 0-8.803 6.99-15.793 15.793-15.793 8.803 0 15.794 6.99 15.794 15.793 0 80.261 63.69 145.635 142.01 145.635s142.011-65.374 142.011-145.635c0-8.803 6.99-15.793 15.794-15.793s15.793 6.99 15.793 15.793c0 95.019-73.789 172.82-165.96 177.093z"></path></svg><span>大约 10 分钟</span></span></div><hr></div><div class="theme-hope-content">
+<h2 id="记忆系统-memory" tabindex="-1"><a class="header-anchor" href="#记忆系统-memory" aria-hidden="true">#</a> 记忆系统 (Memory)</h2>
+<p>一个真正的 AI Agent 不仅需要"思考"和"行动"，还需要"记忆"。记忆系统是 Agent 能够在多轮交互中保持上下文、从过去经验中学习、并在未来做出更好决策的关键基础设施。没有记忆的 Agent 就像一个每隔几分钟就失忆的人——它无法积累经验，也无法提供连贯的服务。</p>
+<p>在认知科学中，人类的记忆系统被分为多个层次，而 AI Agent 的记忆设计深受这一分类的启发。下面我们从人类记忆的类比出发，逐步展开 Agent 记忆系统的各个层面。</p>
+
+<h3 id="人类记忆的类比" tabindex="-1"><a class="header-anchor" href="#人类记忆的类比" aria-hidden="true">#</a> 人类记忆的类比</h3>
+<p>心理学家将人类记忆分为三个层次，这一分类为 AI Agent 的记忆架构提供了天然的设计蓝图：</p>
+<ul>
+<li><strong>感觉记忆 (Sensory Memory)</strong>：对应 Agent 对原始输入的感知，类似于模型接收到的 embedding 向量。这是最短暂的记忆形式，持续时间极短，只保留原始刺激的粗略表征。</li>
+<li><strong>短期/工作记忆 (Short-term / Working Memory)</strong>：对应 Agent 的上下文窗口（context window）。这是 Agent 当前正在处理的信息，容量有限，但可以被主动操作和推理。就像人类的工作记忆只能同时处理 7±2 个信息块一样，Agent 的上下文窗口也受到 token 数量的硬性限制。</li>
+<li><strong>长期记忆 (Long-term Memory)</strong>：对应 Agent 通过外部向量数据库存储的历史经验。容量几乎无限，但需要通过检索（retrieval）才能被激活使用。</li>
+</ul>
+<blockquote><p>这一三层架构的核心思想是：Agent 的"智能"不仅来自于模型本身的推理能力，更来自于它如何有效地存储、检索和利用信息。</p></blockquote>
+
+<h3 id="短期记忆" tabindex="-1"><a class="header-anchor" href="#短期记忆" aria-hidden="true">#</a> 短期记忆</h3>
+<p>Agent 的短期记忆就是它的<strong>上下文窗口</strong>（context window）。这是 LLM 在单次推理中能够"看到"的全部信息，包括系统提示、对话历史、工具调用结果等。</p>
+<p>上下文窗口的发展经历了快速的容量增长：</p>
+<ul>
+<li>早期 GPT-3.5 仅有 4K tokens 的窗口</li>
+<li>GPT-4 将窗口扩展到 128K tokens</li>
+<li>Google Gemini 1.5 Pro 更是达到了 1M tokens 的超长上下文</li>
+</ul>
+<p>然而，窗口越大并不意味着问题就解决了。短期记忆面临的核心挑战包括：</p>
+<ul>
+<li><strong>信息稀释</strong>：随着对话长度增长，关键信息可能被大量无关内容"稀释"，模型对早期重要细节的关注度下降。</li>
+<li><strong>成本与延迟</strong>：更长的上下文意味着更高的计算成本和更慢的推理速度。</li>
+<li><strong>"大海捞针"问题</strong>：即使窗口足够大，模型也未必能从中准确检索到需要的信息。</li>
+</ul>
+<p>因此，实际的 Agent 系统通常会采用<strong>上下文压缩</strong>策略，如摘要历史对话、只保留关键信息片段、或者使用滑动窗口机制。</p>
+
+<h3 id="长期记忆" tabindex="-1"><a class="header-anchor" href="#长期记忆" aria-hidden="true">#</a> 长期记忆</h3>
+<p>长期记忆为 Agent 提供了"无限容量"的历史经验存储。其核心架构基于<strong>向量数据库</strong>（Vector Database），工作流程如下：</p>
+<ol>
+<li><strong>编码</strong>：将文本经验通过 embedding 模型转化为高维向量</li>
+<li><strong>存储</strong>：将向量及其元数据存入向量数据库</li>
+<li><strong>检索</strong>：当 Agent 需要相关信息时，通过向量相似度搜索找到最相关的记忆片段</li>
+</ol>
+<p>常用的向量存储方案包括：</p>
+<ul>
+<li><strong>Pinecone</strong>：全托管的向量数据库服务，开箱即用</li>
+<li><strong>Weaviate</strong>：开源向量搜索引擎，支持混合检索</li>
+<li><strong>ChromaDB</strong>：轻量级嵌入式向量数据库，适合快速原型开发</li>
+<li><strong>FAISS</strong>：Meta 开源的高效向量检索库，适合大规模场景</li>
+</ul>
+<p>在检索算法层面，Lilian Weng 在其博客中总结了多种 MIPS（Maximum Inner Product Search）算法：</p>
+<ul>
+<li><strong>LSH</strong>（Locality-Sensitive Hashing）：通过哈希函数将相似向量映射到同一桶中</li>
+<li><strong>ANNOY</strong>（Approximate Nearest Neighbors Oh Yeah）：基于随机投影树的近似最近邻算法</li>
+<li><strong>HNSW</strong>（Hierarchical Navigable Small World）：基于图结构的分层导航算法，检索速度快、精度高</li>
+<li><strong>FAISS</strong>：Facebook 的向量检索库，支持多种索引类型</li>
+<li><strong>ScaNN</strong>（Scalable Nearest Neighbors）：Google 提出的高效向量检索算法</li>
+</ul>
+
+<h3 id="write-read-reflection-模块" tabindex="-1"><a class="header-anchor" href="#write-read-reflection-模块" aria-hidden="true">#</a> Write/Read/Reflection 模块</h3>
+<p>李宏毅教授在其课程笔记中提出了 Agent 记忆系统的三大核心模块，这一框架清晰地定义了记忆的生命周期：</p>
+<p><strong>Write（写入）</strong>——存储经验</p>
+<p>Agent 在每次交互后，将发生的事情、采取的行动、获得的结果等信息写入长期记忆。关键的写入策略包括：</p>
+<ul>
+<li>记录事件的原始细节（what happened）</li>
+<li>记录行动的成功/失败结果（what worked, what failed）</li>
+<li>记录关键决策点和推理过程</li>
+</ul>
+<p><strong>Read（读取）</strong>——检索相关经验</p>
+<p>当 Agent 面临新任务时，通过 RAG（Retrieval-Augmented Generation）机制从长期记忆中检索最相关的经验。这不仅仅是简单的相似度匹配，还需要考虑：</p>
+<ul>
+<li>时间衰减：近期的记忆通常比远期的更相关</li>
+<li>任务相关性：与当前任务类型相似的经验优先级更高</li>
+<li>成功经验优先：那些导致成功结果的经验更有参考价值</li>
+</ul>
+<p><strong>Reflection（反思）</strong>——经验升华</p>
+<p>这是记忆系统中最有趣的部分。反思机制让 Agent 不只是存储原始经验，还能<strong>定期将经验总结为更高层次的洞察</strong>。就像人类会"复盘"一样，Agent 可以：</p>
+<ul>
+<li>将多个具体事件抽象为一般性规则</li>
+<li>识别反复出现的模式和规律</li>
+<li>更新自己的行为策略和偏好</li>
+</ul>
+
+<h3 id="memgpt-与-a-mem" tabindex="-1"><a class="header-anchor" href="#memgpt-与-a-mem" aria-hidden="true">#</a> MemGPT 与 A-MEM</h3>
+<p><strong>MemGPT</strong>（2023）提出了一种受操作系统虚拟内存启发的分层记忆管理方案。就像 OS 通过页面调度在有限的物理内存和无限的虚拟内存之间切换一样，MemGPT 在有限的上下文窗口和无限的外部存储之间实现了自动的信息调度。当上下文窗口满时，系统会自动将不重要的信息"换出"到外部存储，并在需要时将其"换入"。</p>
+<p><strong>A-MEM</strong>（Autonomous Memory）则探索了更进一步的方向——让 Agent 自主地组织和管理自己的记忆。A-MEM 不依赖预定义的存储结构，而是让 Agent 自己决定什么值得记住、如何组织记忆、以及何时更新已有记忆。这更接近人类记忆的自主性和灵活性。</p>
+
+<h3 id="stream-bench-的发现" tabindex="-1"><a class="header-anchor" href="#stream-bench-的发现" aria-hidden="true">#</a> Stream Bench 的发现</h3>
+<p>Stream Bench 的研究揭示了一个关于记忆有效性的重要发现：</p>
+<ul>
+<li><strong>正面经验</strong>（成功案例）对未来任务有显著帮助，能够有效提升 Agent 在相似场景中的表现</li>
+<li><strong>负面经验</strong>（失败案例）对未来的帮助<strong>非常有限</strong>，甚至可能产生误导</li>
+</ul>
+<p>这一发现提示我们，在设计 Agent 记忆系统时，应该对正面经验给予更高的存储权重和检索优先级。同时也表明，仅仅记录"做了什么"是不够的——记忆的价值在于那些"做对了什么"。</p>
+
+<h2 id="规划能力-planning" tabindex="-1"><a class="header-anchor" href="#规划能力-planning" aria-hidden="true">#</a> 规划能力 (Planning)</h2>
+<p>规划能力是 AI Agent 的另一个核心能力维度。如果说记忆让 Agent 能够"从过去学习"，那么规划则让 Agent 能够"为未来做准备"。一个没有规划能力的 Agent 只能被动地对每一步的输入做出反应，而具备规划能力的 Agent 可以在执行之前就制定出完整的行动方案。</p>
+
+<h3 id="什么是规划" tabindex="-1"><a class="header-anchor" href="#什么是规划" aria-hidden="true">#</a> 什么是规划</h3>
+<p>规划是指 Agent 在执行任务之前，<strong>预先列出为达成目标所需的一系列行动步骤</strong>的过程。一个好的规划需要考虑：</p>
+<ul>
+<li>最终目标是什么</li>
+<li>当前状态与目标状态之间的差距</li>
+<li>可用的工具和资源</li>
+<li>可能的约束条件和限制</li>
+<li>潜在的风险和备选方案</li>
+</ul>
+<p>值得注意的是，规划并非一成不变。在实际执行过程中，Agent 可能会遇到意外情况，需要<strong>动态调整计划</strong>（dynamic replanning）。这种"计划-执行-调整"的循环是 Agent 灵活性的重要体现。</p>
+
+<h3 id="chain-of-thought-cot" tabindex="-1"><a class="header-anchor" href="#chain-of-thought-cot" aria-hidden="true">#</a> Chain of Thought (CoT)</h3>
+<p>Chain of Thought（思维链）是最基础也最重要的规划方法。其核心思想极其简单——<strong>"让我们一步步思考"</strong>（"Let's think step by step"）。</p>
+<p>通过在 prompt 中引导模型逐步推理，CoT 显著提升了 LLM 在复杂任务上的表现。它的工作原理是：</p>
+<ol>
+<li>将复杂问题分解为一系列更小的推理步骤</li>
+<li>每个步骤的输出作为下一步的输入</li>
+<li>逐步逼近最终答案</li>
+</ol>
+<p>CoT 的优势在于简单、通用、不需要额外的基础设施。但它的局限也很明显：它是一条线性的推理路径，如果中间某一步出错，后续所有步骤都会受到影响。</p>
+
+<h3 id="tree-of-thoughts-tot" tabindex="-1"><a class="header-anchor" href="#tree-of-thoughts-tot" aria-hidden="true">#</a> Tree of Thoughts (ToT)</h3>
+<p>Tree of Thoughts（思维树）是 CoT 的增强版本。与 CoT 的线性推理不同，ToT 允许 Agent <strong>同时探索多条推理路径</strong>，就像在一棵树上进行搜索一样。</p>
+<p>ToT 的工作流程如下：</p>
+<ol>
+<li><strong>生成候选思路</strong>：在每一步，生成多个可能的推理方向</li>
+<li><strong>评估</strong>：使用 LLM 自身或启发式方法评估每个方向的前景</li>
+<li><strong>搜索</strong>：使用 BFS（广度优先）或 DFS（深度优先）策略遍历推理树</li>
+<li><strong>回溯</strong>：当某条路径看起来没有前途时，回退到之前的节点尝试其他方向</li>
+</ol>
+<p>这种"探索-评估-回溯"的机制使得 ToT 在需要创造性思维或复杂推理的任务上（如数学证明、创意写作、策略规划）表现出色。当然，代价是更多的 LLM 调用和更高的计算成本。</p>
+
+<h3 id="plan-and-execute-模式" tabindex="-1"><a class="header-anchor" href="#plan-and-execute-模式" aria-hidden="true">#</a> Plan-and-Execute 模式</h3>
+<p>Plan-and-Execute 是一种更结构化的 Agent 架构模式，它将规划和执行明确分离为两个阶段：</p>
+<ol>
+<li><strong>Plan 阶段</strong>：首先由一个"规划者"LLM 生成完整的行动计划，包括所有需要执行的步骤</li>
+<li><strong>Execute 阶段</strong>：然后由一个"执行者"Agent 逐步执行计划中的每个步骤</li>
+<li><strong>Re-plan 阶段</strong>：当执行过程中遇到预期之外的结果时，触发重新规划</li>
+</ol>
+<p>与纯 ReAct 模式相比，Plan-and-Execute 的优势在于：</p>
+<ul>
+<li>全局视野：规划者可以看到整个任务的全貌，而不仅仅是当前一步</li>
+<li>效率更高：减少了不必要的试错步骤</li>
+<li>可解释性更强：用户可以查看和修改 Agent 的计划</li>
+</ul>
+<p>典型的实现方式是使用一个强模型（如 GPT-4）作为规划者，一个快模型（如 GPT-3.5）作为执行者，在成本和能力之间取得平衡。</p>
+
+<h3 id="llm-的规划能力评估" tabindex="-1"><a class="header-anchor" href="#llm-的规划能力评估" aria-hidden="true">#</a> LLM 的规划能力评估</h3>
+<p>LLM 究竟有多强的规划能力？这个问题一直是学术界争论的焦点。李宏毅教授在课程中引用了多项关键研究：</p>
+<p><strong>PlanBench（2023）</strong></p>
+<p>PlanBench 是第一个系统性评估 LLM 规划能力的基准测试。研究发现：</p>
+<ul>
+<li>LLM 确实具备一定的规划能力，但这种能力<strong>有限且不稳定</strong></li>
+<li>在简单的规划任务上，LLM 表现不错</li>
+<li>但随着任务复杂度增加（更多约束、更多步骤），性能迅速下降</li>
+</ul>
+<p><strong>TravelPlanner（2024）</strong></p>
+<p>TravelPlanner 专注于评估 LLM 在复杂约束条件下的规划能力。旅行规划任务涉及多种约束（时间、预算、偏好、交通连接等），研究发现：</p>
+<ul>
+<li>基于约束的复杂规划对 LLM 来说仍然极具挑战性</li>
+<li>即使是最先进的模型，在满足所有约束条件的同时生成可行方案方面仍然困难</li>
+</ul>
+<blockquote><p>正如李宏毅教授所总结的：LLM 的规划能力"介于有和无之间"——它们确实能做一定程度的规划，但远远不能称为可靠。</p></blockquote>
+
+<h3 id="优化规划能力的方法" tabindex="-1"><a class="header-anchor" href="#优化规划能力的方法" aria-hidden="true">#</a> 优化规划能力的方法</h3>
+<p>既然 LLM 原生的规划能力有限，研究者们提出了多种优化策略：</p>
+<p><strong>1. 暴力搜索（Brute-force Search）</strong></p>
+<p>最直接的方法是让 LLM 生成所有可能的计划，然后逐一评估。理论上能找到最优解，但计算成本呈指数增长，实际中几乎不可行。</p>
+<p><strong>2. 带剪枝的树搜索（Tree Search with Pruning）</strong></p>
+<p>借鉴棋类 AI 的思路，使用树搜索配合剪枝策略。李宏毅教授将这一过程形象地比喻为<strong>"脑内小剧场"</strong>——Agent 在心中模拟不同行动的可能结果，提前排除明显不好的选项，只对有前途的路径进行深入探索。</p>
+<p><strong>3. LLM 作为世界模型</strong></p>
+<p>让 LLM 充当"世界模型"，预测每个行动可能导致的状态变化。Agent 可以在这个"内心世界"中进行模拟和推演，而不需要在真实环境中试错。</p>
+<p><strong>4. 推理模型（Reasoning Models）</strong></p>
+<p>以 DeepSeek-R1 为代表的新一代推理模型，通过强化学习训练出更强的内在推理能力。这类模型在规划任务上展现出了显著的优势，它们能够进行更长链的推理、更好的自我纠错、以及更准确的约束满足。</p>
+<p><strong>5. 解决"过度思考"问题</strong></p>
+<p>研究发现，LLM 有时会"想太多"——在简单的任务上花费过多的推理步骤，反而导致性能下降。优化方向包括：动态调整推理深度、在简单步骤上"快速通过"、以及在困难步骤上"深入思考"。</p>
+
+<h2 id="推荐阅读" tabindex="-1"><a class="header-anchor" href="#推荐阅读" aria-hidden="true">#</a> 推荐阅读</h2>
+<ul>
+<li><a href="https://lilianweng.github.io/posts/2023-06-23-agent/" target="_blank" rel="noopener noreferrer">Lilian Weng - LLM Powered Autonomous Agents</a> — Agent 记忆系统的经典综述</li>
+<li><a href="https://arxiv.org/abs/2310.08560" target="_blank" rel="noopener noreferrer">MemGPT: Towards LLMs as Operating Systems</a> — 分层记忆管理的开创性工作</li>
+<li><a href="https://arxiv.org/abs/2305.10601" target="_blank" rel="noopener noreferrer">Tree of Thoughts: Deliberate Problem Solving with LLMs</a> — 思维树方法的原始论文</li>
+<li><a href="https://arxiv.org/abs/2305.15486" target="_blank" rel="noopener noreferrer">PlanBench: An Extensible Benchmark for Evaluating Planning Capabilities</a> — LLM 规划能力评估基准</li>
+</ul>
+</div><footer class="page-meta"><div class="meta-item git-info"></div></footer></main>
+<footer class="footer-wrapper"><div class="footer">默认页脚</div><div class="copyright">Copyright © 2023 杨景</div></footer>
+</div></div>
+<script type="module" src="/myblogone/assets/app-beffe7bc.js" defer></script>
+</body>
+</html>
