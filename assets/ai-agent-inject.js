@@ -53,21 +53,24 @@
     var navLinks = document.querySelector(".nav-links");
     if (!navLinks) return;
 
-    // Look for VuePress-rendered AI Agent <a> tag and convert it to <span>
-    var aiAnchor = navLinks.querySelector('a[href*="ai-agent"]');
-    if (aiAnchor) {
-      var parentItem = aiAnchor.closest(".nav-item");
-      if (parentItem) {
+    // CRITICAL: Convert ALL AI Agent <a> tags to <span> IMMEDIATELY.
+    // Even if multiple exist (race condition), convert them all.
+    var aiAnchors = navLinks.querySelectorAll('a[href*="ai-agent"]');
+    for (var j = 0; j < aiAnchors.length; j++) {
+      var anchor = aiAnchors[j];
+      // Skip if parent is already our fixed item
+      var parentItem = anchor.closest(".nav-item");
+      if (parentItem && parentItem.dataset.fixed !== "1") {
         var span = createNavSpan();
-        aiAnchor.parentNode.replaceChild(span, aiAnchor);
+        anchor.parentNode.replaceChild(span, anchor);
+        parentItem.dataset.fixed = "1";
       }
-      return;
     }
 
-    // Look for our already-converted <span>
+    // Check if we already have a working <span>
     if (navLinks.querySelector('span.nav-link[aria-label="AI Agent"]')) return;
 
-    // If neither exists, inject a new nav item before "分类"
+    // If nothing exists, inject a new nav item before "分类"
     var categoryAnchor = navLinks.querySelector('a[href*="/category"]');
     if (!categoryAnchor) return;
     var categoryItem = categoryAnchor.closest(".nav-item");
@@ -75,6 +78,7 @@
 
     var navItem = document.createElement("div");
     navItem.className = "nav-item hide-in-mobile";
+    navItem.dataset.fixed = "1";
     navItem.appendChild(createNavSpan());
     categoryItem.parentNode.insertBefore(navItem, categoryItem);
   }
