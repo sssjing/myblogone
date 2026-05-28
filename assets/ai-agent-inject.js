@@ -1,5 +1,7 @@
 (function() {
   "use strict";
+  window.__aiAgentLoaded = true;
+  window.__aiAgentLog = [];
 
   // CRITICAL: Immediately convert AI Agent nav link from <a> to <span>
   // to prevent Vue Router from intercepting clicks and showing 404.
@@ -106,12 +108,19 @@
     });
   }
 
-  function run() { fixNavLink(); injectArticles(); }
+  function run() {
+    window.__aiAgentLog.push('run:' + Date.now());
+    fixNavLink();
+    injectArticles();
+  }
 
   // Run multiple times to handle initial hydration timing
   setTimeout(run, 500);
   setTimeout(run, 1500);
-  setTimeout(run, 3500);
+  setTimeout(run, 3000);
+  setTimeout(run, 5000);
+  // Also run on DOMContentLoaded
+  document.addEventListener('DOMContentLoaded', function() { setTimeout(run, 100); });
 
   // MutationObserver: IMMEDIATELY fix AI Agent nav link on every DOM change.
   // This is critical - any delay means Vue Router can intercept the click.
