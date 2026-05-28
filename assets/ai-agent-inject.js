@@ -1,5 +1,5 @@
 (function() {
-  // Wait for VuePress hydration to complete, then ensure AI Agent articles are visible
+  // Wait for VuePress hydration to complete, then ensure AI Agent articles + nav link are visible
   const AI_ARTICLES = [
     { href: "/myblogone/posts/ai-agent/interview-guide.html", title: "AI Agent 面经与面试题", excerpt: "高频面试题整理：Agent 与 Chatbot 的区别、RAG vs Fine-tuning 选择、Function Calling 原理、Multi-Agent 优缺点、Agent 安全性问题、评估方法等核心知识点。", time: "15 分钟" },
     { href: "/myblogone/posts/ai-agent/frameworks.html", title: "AI Agent 框架对比", excerpt: "全面对比 LangChain/LangGraph、CrewAI、AutoGen、MetaGPT、AutoGPT 等主流框架的特点、优劣势和适用场景。", time: "12 分钟" },
@@ -8,6 +8,25 @@
     { href: "/myblogone/posts/ai-agent/react-pattern.html", title: "ReAct 模式与 Agent 架构", excerpt: "从 Chain-of-Thought 到 ReAct 的演进，Thought-Action-Observation 循环详解，Anthropic 五大工作流模式。", time: "10 分钟" },
     { href: "/myblogone/posts/ai-agent/agent-basics.html", title: "AI Agent 基础概念", excerpt: "什么是 AI Agent？Agent 的核心架构（Planning + Memory + Tool Use）、Agency Level 分级、发展历程与应用场景。", time: "8 分钟" }
   ];
+
+  function injectNavLink() {
+    // Add AI Agent nav link to navbar if missing
+    const navLinks = document.querySelector(".nav-links");
+    if (!navLinks) return;
+    // Check if AI Agent link already exists
+    const existing = navLinks.querySelector('a[href*="ai-agent"]');
+    if (existing) return;
+    // Find "分类" link to insert before it
+    const categoryLink = navLinks.querySelector('a[href*="/category"]');
+    if (!categoryLink) return;
+    const categoryItem = categoryLink.closest(".nav-item");
+    if (!categoryItem) return;
+    // Create AI Agent nav item
+    const navItem = document.createElement("div");
+    navItem.className = "nav-item hide-in-mobile";
+    navItem.innerHTML = '<a href="/myblogone/posts/ai-agent/" class="nav-link" aria-label="AI Agent"><span class="font-icon icon iconfont icon-category" style=""></span>AI Agent</a>';
+    categoryItem.parentNode.insertBefore(navItem, categoryItem);
+  }
 
   function inject() {
     // Find article list wrapper on homepage or article listing
@@ -47,10 +66,12 @@
   }
 
   // Try immediately and also after a delay (wait for hydration)
-  setTimeout(inject, 1500);
-  setTimeout(inject, 3000);
+  setTimeout(function() { injectNavLink(); inject(); }, 1000);
+  setTimeout(function() { injectNavLink(); inject(); }, 2000);
+  setTimeout(function() { injectNavLink(); inject(); }, 4000);
   // Also use MutationObserver to detect when VuePress finishes rendering
   var observer = new MutationObserver(function() {
+    injectNavLink();
     inject();
   });
   var target = document.querySelector("#app");
