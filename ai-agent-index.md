@@ -1,0 +1,152 @@
+- generic [ref=e2]:
+  - link "跳至主要內容" [ref=e3] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - link [ref=e7] [cursor=pointer]:
+        - /url: /myblogone/
+      - navigation [ref=e9]:
+        - link "My Blog" [ref=e11] [cursor=pointer]:
+          - /url: /myblogone/
+          - text: My Blog
+        - link "脚本" [ref=e13] [cursor=pointer]:
+          - /url: /myblogone/posts/%E4%B8%AA%E4%BA%BA%E8%84%9A%E6%9C%AC/%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E7%BB%8F%E7%BA%AC%E5%BA%A6.html
+          - text: 脚本
+        - link "Java" [ref=e15] [cursor=pointer]:
+          - /url: /myblogone/posts/Java/JVM/1.html
+          - text: Java
+        - link "读书笔记" [ref=e17] [cursor=pointer]:
+          - /url: /myblogone/posts/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%A6%E9%80%8FSpring/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9ASpring%20Framework%E4%B8%AD%E7%9A%84IoC%E5%AE%B9%E5%99%A8.html
+          - text: 读书笔记
+        - link "AI Agent" [ref=e19] [cursor=pointer]:
+          - /url: /myblogone/posts/ai-agent/
+          - text: AI Agent
+        - link "分类" [ref=e21] [cursor=pointer]:
+          - /url: /myblogone/category
+          - text: 分类
+        - link "Bilibili" [ref=e23] [cursor=pointer]:
+          - /url: https://www.bilibili.com/
+          - text: Bilibili
+          - generic [ref=e24]:
+            - img [ref=e25]
+            - generic [ref=e28]: open in new window
+      - search "搜索" [ref=e30] [cursor=pointer]:
+        - img "search icon" [ref=e31]
+    - main [ref=e33]:
+      - generic [ref=e34]:
+        - heading "AI Agent 知识体系" [level=1] [ref=e35]: AI Agent 知识体系
+        - generic "作者🖊" [ref=e37] [cursor=pointer]:
+          - img "author icon" [ref=e38]
+          - link "杨景" [ref=e41]:
+            - /url: https://github.com/sssjing/myblogone
+          - text: 作者🖊
+        - separator [ref=e42]
+      - generic [ref=e43]:
+        - paragraph [ref=e44]: 从基础概念到框架实战，系统学习 AI Agent 开发。内容涵盖 Agent 架构、ReAct 模式、Function Calling、记忆系统、规划能力、主流框架对比以及面试准备。
+        - heading "入门基础" [level=2] [ref=e45]:
+          - link [ref=e46] [cursor=pointer]:
+            - /url: "#入门基础"
+            - text: "#"
+          - text: 入门基础
+        - list [ref=e47]:
+          - listitem [ref=e48]:
+            - generic [ref=e49]:
+              - heading "AI Agent 基础概念" [level=3] [ref=e50]:
+                - link "AI Agent 基础概念" [ref=e51] [cursor=pointer]:
+                  - /url: /myblogone/posts/ai-agent/agent-basics.html
+              - paragraph [ref=e52]: 什么是 AI Agent？Agent 的核心架构（Planning + Memory + Tool Use）、Agency Level 分级、发展历程与应用场景。基于 Lilian Weng 博客和李宏毅课程笔记整理。
+              - generic [ref=e53]: 2025-05-27 约 8 分钟
+          - listitem [ref=e54]:
+            - generic [ref=e55]:
+              - heading "ReAct 模式与 Agent 架构" [level=3] [ref=e56]:
+                - link "ReAct 模式与 Agent 架构" [ref=e57] [cursor=pointer]:
+                  - /url: /myblogone/posts/ai-agent/react-pattern.html
+              - paragraph [ref=e58]: 从 Chain-of-Thought 到 ReAct 的演进，Thought-Action-Observation 循环详解，Anthropic 五大工作流模式（Prompt Chaining、Routing、Parallelization、Orchestrator-Workers、Evaluator-Optimizer）。
+              - generic [ref=e59]: 2025-05-27 约 10 分钟
+        - heading "核心能力" [level=2] [ref=e60]:
+          - link [ref=e61] [cursor=pointer]:
+            - /url: "#核心能力"
+            - text: "#"
+          - text: 核心能力
+        - list [ref=e62]:
+          - listitem [ref=e63]:
+            - generic [ref=e64]:
+              - heading "Function Calling 与工具使用" [level=3] [ref=e65]:
+                - link "Function Calling 与工具使用" [ref=e66] [cursor=pointer]:
+                  - /url: /myblogone/posts/ai-agent/tool-use.html
+              - paragraph [ref=e67]: Function Calling 工作原理、工具描述设计、工具过多时的 RAG 检索方案、工具结果校准、MCP 协议介绍。基于李宏毅课程笔记和 Toolformer、HuggingGPT 论文整理。
+              - generic [ref=e68]: 2025-05-27 约 8 分钟
+          - listitem [ref=e69]:
+            - generic [ref=e70]:
+              - heading "记忆系统与规划能力" [level=3] [ref=e71]:
+                - link "记忆系统与规划能力" [ref=e72] [cursor=pointer]:
+                  - /url: /myblogone/posts/ai-agent/memory-planning.html
+              - paragraph [ref=e73]: Agent 记忆系统设计（短期记忆、长期记忆、反思模块）、向量检索算法（LSH、HNSW、FAISS）、规划能力评估（PlanBench、TravelPlanner）与优化策略。
+              - generic [ref=e74]: 2025-05-27 约 10 分钟
+        - heading "框架实战" [level=2] [ref=e75]:
+          - link [ref=e76] [cursor=pointer]:
+            - /url: "#框架实战"
+            - text: "#"
+          - text: 框架实战
+        - list [ref=e77]:
+          - listitem [ref=e78]:
+            - generic [ref=e79]:
+              - heading "AI Agent 框架对比" [level=3] [ref=e80]:
+                - link "AI Agent 框架对比" [ref=e81] [cursor=pointer]:
+                  - /url: /myblogone/posts/ai-agent/frameworks.html
+              - paragraph [ref=e82]: 全面对比 LangChain/LangGraph、CrewAI、AutoGen、MetaGPT、AutoGPT 等主流框架的特点、优劣势和适用场景，帮助开发者选择合适的 Agent 开发框架。
+              - generic [ref=e83]: 2025-05-27 约 12 分钟
+        - heading "面试准备" [level=2] [ref=e84]:
+          - link [ref=e85] [cursor=pointer]:
+            - /url: "#面试准备"
+            - text: "#"
+          - text: 面试准备
+        - list [ref=e86]:
+          - listitem [ref=e87]:
+            - generic [ref=e88]:
+              - heading "AI Agent 面经与面试题" [level=3] [ref=e89]:
+                - link "AI Agent 面经与面试题" [ref=e90] [cursor=pointer]:
+                  - /url: /myblogone/posts/ai-agent/interview-guide.html
+              - paragraph [ref=e91]: 高频面试题整理：Agent 与 Chatbot 的区别、RAG vs Fine-tuning 选择、Function Calling 原理、Multi-Agent 优缺点、Agent 安全性问题、评估方法等核心知识点。
+              - generic [ref=e92]: 2025-05-27 约 15 分钟
+        - heading "推荐阅读" [level=2] [ref=e93]:
+          - link [ref=e94] [cursor=pointer]:
+            - /url: "#推荐阅读"
+            - text: "#"
+          - text: 推荐阅读
+        - list [ref=e95]:
+          - listitem [ref=e96]:
+            - link "LLM Powered Autonomous Agents - Lilian Weng" [ref=e97] [cursor=pointer]:
+              - /url: https://lilianweng.github.io/posts/2023-06-23-agent/
+            - text: "- Agent 领域最经典的博客文章"
+          - listitem [ref=e98]:
+            - link "Building Effective Agents - Anthropic" [ref=e99] [cursor=pointer]:
+              - /url: https://www.anthropic.com/engineering/building-effective-agents
+            - text: "- Anthropic 官方 Agent 开发指南"
+          - listitem [ref=e100]:
+            - link "AI Agent 基础 - 李宏毅课程笔记" [ref=e101] [cursor=pointer]:
+              - /url: https://plmsmile.github.io/posts/llm/agent/basic/01-lhy-agent-notes.html
+            - text: "- 中文 Agent 入门笔记"
+          - listitem [ref=e102]:
+            - link "awesome-ai-agents - GitHub" [ref=e103] [cursor=pointer]:
+              - /url: https://github.com/e2b-dev/awesome-ai-agents
+            - text: "- 最全的 AI Agent 资源列表"
+          - listitem [ref=e104]:
+            - link "LangChain - GitHub" [ref=e105] [cursor=pointer]:
+              - /url: https://github.com/langchain-ai/langchain
+            - text: "- 最流行的 LLM 应用开发框架"
+          - listitem [ref=e106]:
+            - link "CrewAI - GitHub" [ref=e107] [cursor=pointer]:
+              - /url: https://github.com/crewAIInc/crewAI
+            - text: "- 多 Agent 协作框架"
+          - listitem [ref=e108]:
+            - link "AutoGen - Microsoft" [ref=e109] [cursor=pointer]:
+              - /url: https://github.com/microsoft/autogen
+            - text: "- 微软多 Agent 对话框架"
+          - listitem [ref=e110]:
+            - link "MetaGPT - GitHub" [ref=e111] [cursor=pointer]:
+              - /url: https://github.com/geekan/MetaGPT
+            - text: "- 多 Agent 虚拟软件公司"
+    - contentinfo [ref=e113]:
+      - generic [ref=e114]: 默认页脚
+      - generic [ref=e115]: Copyright © 2023 杨景

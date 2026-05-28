@@ -1,0 +1,555 @@
+- generic [ref=e2]:
+  - link "跳至主要內容" [ref=e3] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - link [ref=e7] [cursor=pointer]:
+        - /url: /myblogone/
+      - navigation [ref=e9]:
+        - link "My Blog" [ref=e11] [cursor=pointer]:
+          - /url: /myblogone/
+          - generic [ref=e12]: 
+          - text: My Blog
+        - link "脚本" [ref=e14] [cursor=pointer]:
+          - /url: /myblogone/posts/%E4%B8%AA%E4%BA%BA%E8%84%9A%E6%9C%AC/%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E7%BB%8F%E7%BA%AC%E5%BA%A6.html
+          - generic [ref=e15]: 
+          - text: 脚本
+        - link "Java" [ref=e17] [cursor=pointer]:
+          - /url: /myblogone/posts/Java/JVM/1.html
+          - generic [ref=e18]: 
+          - text: Java
+        - link "读书笔记" [ref=e20] [cursor=pointer]:
+          - /url: /myblogone/posts/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%A6%E9%80%8FSpring/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9ASpring%20Framework%E4%B8%AD%E7%9A%84IoC%E5%AE%B9%E5%99%A8.html
+          - generic [ref=e21]: 
+          - text: 读书笔记
+        - link "分类" [ref=e23] [cursor=pointer]:
+          - /url: /myblogone/category
+          - generic [ref=e24]: 
+          - text: 分类
+        - link "Bilibili" [ref=e26] [cursor=pointer]:
+          - /url: https://www.bilibili.com/
+          - generic [ref=e27]: 
+          - text: Bilibili
+          - generic [ref=e28]:
+            - img [ref=e29]
+            - generic [ref=e32]: open in new window
+      - generic [ref=e33]:
+        - button [ref=e35] [cursor=pointer]:
+          - img [ref=e36]
+        - search "搜索" [ref=e38] [cursor=pointer]:
+          - img "search icon" [ref=e39]
+    - main [ref=e41]:
+      - generic [ref=e42]:
+        - paragraph [ref=e43]: "404"
+        - heading "页面不存在" [level=1] [ref=e44]
+        - paragraph [ref=e45]: 这里什么也没有
+      - generic [ref=e46]:
+        - button "返回上一页" [ref=e47]
+        - button "带我回家" [ref=e48]
+    - contentinfo [ref=e49]:
+      - generic [ref=e50]: 默认页脚
+      - generic [ref=e51]: Copyright © 2026 杨景
+  - generic [ref=e52]:
+    - banner [ref=e53]:
+      - link [ref=e55] [cursor=pointer]:
+        - /url: /myblogone/
+      - navigation [ref=e57]:
+        - link "My Blog" [ref=e59] [cursor=pointer]:
+          - /url: /myblogone/
+          - generic [ref=e60]: 
+          - text: My Blog
+        - link "脚本" [ref=e62] [cursor=pointer]:
+          - /url: /myblogone/posts/%E4%B8%AA%E4%BA%BA%E8%84%9A%E6%9C%AC/%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E7%BB%8F%E7%BA%AC%E5%BA%A6.html
+          - generic [ref=e63]: 
+          - text: 脚本
+        - link "Java" [ref=e65] [cursor=pointer]:
+          - /url: /myblogone/posts/Java/JVM/1.html
+          - generic [ref=e66]: 
+          - text: Java
+        - link "读书笔记" [ref=e68] [cursor=pointer]:
+          - /url: /myblogone/posts/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%A6%E9%80%8FSpring/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9ASpring%20Framework%E4%B8%AD%E7%9A%84IoC%E5%AE%B9%E5%99%A8.html
+          - generic [ref=e69]: 
+          - text: 读书笔记
+        - link "AI Agent" [ref=e71] [cursor=pointer]:
+          - /url: /myblogone/posts/ai-agent/
+          - generic [ref=e72]: 
+          - text: AI Agent
+        - link "分类" [ref=e74] [cursor=pointer]:
+          - /url: /myblogone/category
+          - generic [ref=e75]: 
+          - text: 分类
+        - link "Bilibili" [ref=e77] [cursor=pointer]:
+          - /url: https://www.bilibili.com/
+          - generic [ref=e78]: 
+          - text: Bilibili
+          - generic [ref=e79]:
+            - img [ref=e80]
+            - generic [ref=e83]: open in new window
+      - search "搜索" [ref=e85] [cursor=pointer]:
+        - img "search icon" [ref=e86]
+    - complementary [ref=e88]:
+      - list [ref=e89]:
+        - listitem [ref=e90]:
+          - link "My Blog" [ref=e91] [cursor=pointer]:
+            - /url: /myblogone/
+            - generic [ref=e92]: 
+            - text: My Blog
+        - listitem [ref=e93]:
+          - generic [ref=e94]:
+            - button " AI Agent" [ref=e95] [cursor=pointer]:
+              - generic [ref=e96]: 
+              - generic [ref=e97]: AI Agent
+            - list [ref=e99]:
+              - listitem [ref=e100]:
+                - link "AI Agent 基础概念" [ref=e101] [cursor=pointer]:
+                  - /url: /myblogone/posts/ai-agent/agent-basics.html
+              - listitem [ref=e102]:
+                - link "ReAct 模式与 Agent 架构" [ref=e103] [cursor=pointer]:
+                  - /url: /myblogone/posts/ai-agent/react-pattern.html
+              - listitem [ref=e104]:
+                - link "Function Calling 与工具使用" [ref=e105] [cursor=pointer]:
+                  - /url: /myblogone/posts/ai-agent/tool-use.html
+              - listitem [ref=e106]:
+                - link "记忆系统与规划能力" [ref=e107] [cursor=pointer]:
+                  - /url: /myblogone/posts/ai-agent/memory-planning.html
+              - listitem [ref=e108]:
+                - link "AI Agent 框架对比" [ref=e109] [cursor=pointer]:
+                  - /url: /myblogone/posts/ai-agent/frameworks.html
+              - listitem [ref=e110]:
+                - link "AI Agent 面经与面试题" [ref=e111] [cursor=pointer]:
+                  - /url: /myblogone/posts/ai-agent/interview-guide.html
+    - main [ref=e112]:
+      - generic [ref=e113]:
+        - heading " AI Agent 面经与面试题" [level=1] [ref=e114]:
+          - generic [ref=e115]: 
+          - text: AI Agent 面经与面试题
+        - generic [ref=e116]:
+          - generic "作者🖊" [ref=e117] [cursor=pointer]:
+            - img "author icon" [ref=e118]
+            - link "杨景" [ref=e121]:
+              - /url: https://github.com/sssjing/myblogone
+            - text: 作者🖊
+          - generic "写作日期📅" [ref=e122] [cursor=pointer]:
+            - img "calendar icon" [ref=e123]
+            - generic [ref=e125]: 2025-05-27
+            - text: 写作日期📅
+          - generic "阅读时间⌛" [ref=e126] [cursor=pointer]:
+            - img "timer icon" [ref=e127]
+            - generic [ref=e129]: 大约 15 分钟
+            - text: 阅读时间⌛
+        - separator [ref=e130]
+      - generic [ref=e131]:
+        - paragraph [ref=e132]: 本文整理了 AI Agent 方向的高频面试题与面经，涵盖基础概念、RAG、Function Calling、Multi-Agent 以及高级话题等核心知识点，适合准备 AI Agent 相关岗位面试的同学参考复习。
+        - heading "基础概念类" [level=2] [ref=e133]:
+          - link [ref=e134] [cursor=pointer]:
+            - /url: "#基础概念类"
+            - text: "#"
+          - text: 基础概念类
+        - 'heading "Q: 什么是 AI Agent？和 Chatbot 有什么区别？" [level=3] [ref=e135]':
+          - link [ref=e136] [cursor=pointer]:
+            - /url: "#q-什么是-ai-agent-和-chatbot-有什么区别"
+            - text: "#"
+          - text: "Q: 什么是 AI Agent？和 Chatbot 有什么区别？"
+        - paragraph [ref=e137]:
+          - strong [ref=e138]: AI Agent
+          - text: 是以大语言模型（LLM）为核心推理引擎，结合
+          - strong [ref=e139]: Planning（规划）
+          - text: 、
+          - strong [ref=e140]: Memory（记忆）
+          - text: 和
+          - strong [ref=e141]: Tool Use（工具使用）
+          - text: 三大模块，能够自主感知环境、制定计划、执行动作并根据反馈迭代优化的智能体系统。其核心公式可以表示为：
+          - code [ref=e142]: Agent = LLM + Planning + Memory + Tool Use
+          - text: 。
+        - paragraph [ref=e143]:
+          - text: 与传统 Chatbot 相比，二者存在本质差异。Chatbot 本质上是
+          - strong [ref=e144]: 被动式（reactive）
+          - text: 的对话系统，无论是单轮还是多轮对话，都只能根据用户输入做出回应，缺乏自主性。而 Agent 是
+          - strong [ref=e145]: 主动式（proactive）
+          - text: 的，它能够自主规划任务步骤、调用外部工具（如搜索引擎、代码执行器、数据库等）、利用记忆系统保持上下文连贯性，并在遇到错误时自动调整策略重试。最关键的区别在于
+          - strong [ref=e146]: 自主性（autonomy）
+          - text: 和
+          - strong [ref=e147]: 环境交互能力
+          - text: ：Agent 能够独立完成复杂的多步骤任务，而不仅仅是回答问题。
+        - blockquote [ref=e148]:
+          - paragraph [ref=e149]: 面试要点：回答时要突出 Agent 的四大核心能力（规划、记忆、工具、反思），并用具体场景举例说明 Agent 相比 Chatbot 的优势。
+        - 'heading "Q: Agent 的核心架构是什么？" [level=3] [ref=e150]':
+          - link [ref=e151] [cursor=pointer]:
+            - /url: "#q-agent-的核心架构是什么"
+            - text: "#"
+          - text: "Q: Agent 的核心架构是什么？"
+        - paragraph [ref=e152]:
+          - text: 目前业界最广泛引用的 Agent 架构来自
+          - strong [ref=e153]: Lilian Weng
+          - text: 的博客文章
+          - emphasis [ref=e154]: "\"LLM Powered Autonomous Agents\""
+          - text: 。该架构将 LLM 作为 Agent 的"大脑"，围绕其构建三大核心模块：
+        - list [ref=e155]:
+          - listitem [ref=e156]:
+            - strong [ref=e157]: Planning（规划）
+            - text: ：包括任务分解（Task Decomposition）和自我反思（Self-Reflection）。任务分解将复杂目标拆解为可执行的子任务序列；自我反思则允许 Agent 在执行后评估结果并调整后续计划。常见技术包括 Chain of Thought（CoT）、Tree of Thoughts（ToT）以及 Reflexion 等。
+          - listitem [ref=e158]:
+            - strong [ref=e159]: Memory（记忆）
+            - text: ：分为短期记忆和长期记忆。短期记忆对应模型的上下文窗口（Context Window），用于维持当前对话的状态；长期记忆通常借助外部向量数据库（Vector Store）实现，可以存储和检索历史交互中的关键信息。
+          - listitem [ref=e160]:
+            - strong [ref=e161]: Tool Use（工具使用）
+            - text: ：通过 Function Calling 等机制，Agent 可以调用外部 API、代码解释器、数据库查询等工具来获取信息或执行操作，从而突破 LLM 自身知识和能力的边界。
+        - blockquote [ref=e162]:
+          - paragraph [ref=e163]: 面试要点：画图说明三大模块与 LLM 之间的数据流关系，强调这是一个循环迭代的系统而非线性流程。
+        - 'heading "Q: 什么是 ReAct 模式？" [level=3] [ref=e164]':
+          - link [ref=e165] [cursor=pointer]:
+            - /url: "#q-什么是-react-模式"
+            - text: "#"
+          - text: "Q: 什么是 ReAct 模式？"
+        - paragraph [ref=e166]:
+          - strong [ref=e167]: ReAct（Reasoning + Acting）
+          - text: 是一种将推理与行动交替进行的 Agent 执行范式，由 Yao et al. 在 2022 年提出。其核心循环为：
+          - strong [ref=e168]: Thought（思考） → Action（行动） → Observation（观察）
+          - text: 。
+        - paragraph [ref=e169]: 在每一轮循环中，Agent 首先通过 Thought 进行推理分析当前状态和下一步计划；然后通过 Action 执行具体操作（如搜索、计算、调用 API）；最后通过 Observation 获取行动的结果，并将其作为下一轮推理的输入。这种模式的优势在于：
+        - list [ref=e170]:
+          - listitem [ref=e171]:
+            - text: 相比纯
+            - strong [ref=e172]: Chain of Thought
+            - text: （仅有推理没有行动），ReAct 能够获取外部信息，避免"幻觉"；
+          - listitem [ref=e173]:
+            - text: 相比纯
+            - strong [ref=e174]: Acting
+            - text: （仅有行动没有推理），ReAct 的推理步骤使得决策过程更加可解释、更不容易出错；
+          - listitem [ref=e175]: 推理与行动的交替使得 Agent 能够根据中间结果动态调整策略。
+        - blockquote [ref=e176]:
+          - paragraph [ref=e177]: 面试要点：最好能手写一个简单的 ReAct 循环伪代码，展示 Thought/Action/Observation 的交替过程。
+        - heading "RAG 相关" [level=2] [ref=e178]:
+          - link [ref=e179] [cursor=pointer]:
+            - /url: "#rag-相关"
+            - text: "#"
+          - text: RAG 相关
+        - 'heading "Q: 什么是 RAG？和 Fine-tuning 如何选择？" [level=3] [ref=e180]':
+          - link [ref=e181] [cursor=pointer]:
+            - /url: "#q-什么是-rag-和-fine-tuning-如何选择"
+            - text: "#"
+          - text: "Q: 什么是 RAG？和 Fine-tuning 如何选择？"
+        - paragraph [ref=e182]:
+          - strong [ref=e183]: RAG（Retrieval-Augmented Generation，检索增强生成）
+          - text: 是一种在生成回答之前先从外部知识库中检索相关文档，然后将检索到的上下文信息注入到 LLM 的 prompt 中辅助生成的技术方案。其核心思想是"先查后答"，让模型基于真实数据而非仅凭参数记忆来回答问题。
+        - paragraph [ref=e184]:
+          - strong [ref=e185]: Fine-tuning（微调）
+          - text: 则是使用领域特定数据对预训练模型的参数进行调整，使模型习得特定的知识或风格。
+        - paragraph [ref=e186]: 选择策略如下：
+        - list [ref=e187]:
+          - listitem [ref=e188]:
+            - strong [ref=e189]: 选择 RAG 的场景
+            - text: ：知识频繁更新（如新闻、产品信息）、需要引用来源以保证可追溯性、计算资源有限无法微调大模型、对数据隐私有要求（知识库可独立管理）。
+          - listitem [ref=e190]:
+            - strong [ref=e191]: 选择 Fine-tuning 的场景
+            - text: ：领域知识相对稳定、需要改变模型的输出风格或格式、对响应延迟有严格要求（RAG 需要额外的检索步骤）、需要提升模型在特定任务上的基础能力。
+          - listitem [ref=e192]:
+            - strong [ref=e193]: 实践中两者常结合使用
+            - text: ：通过轻量级微调提升模型对特定领域文档的理解能力，同时保留 RAG 架构以支持动态知识更新。
+        - blockquote [ref=e194]:
+          - paragraph [ref=e195]: 面试要点：强调"没有银弹"，需要根据业务场景的具体需求来选择，实际项目中两者经常组合使用。
+        - 'heading "Q: RAG 的核心流程是什么？" [level=3] [ref=e196]':
+          - link [ref=e197] [cursor=pointer]:
+            - /url: "#q-rag-的核心流程是什么"
+            - text: "#"
+          - text: "Q: RAG 的核心流程是什么？"
+        - paragraph [ref=e198]: 一个标准的 RAG 系统包含以下核心流程：
+        - list [ref=e199]:
+          - listitem [ref=e200]:
+            - strong [ref=e201]: 文档加载（Document Loading）
+            - text: ：从各种数据源（PDF、网页、数据库等）加载原始文档。
+          - listitem [ref=e202]:
+            - strong [ref=e203]: 文本分块（Chunking）
+            - text: ：将长文档切分为适当大小的文本块。关键决策包括分块大小（通常 256-1024 tokens）、重叠比例（通常 10%-20%）以及分块策略（固定长度、语义分块、递归分块等）。
+          - listitem [ref=e204]:
+            - strong [ref=e205]: 向量化（Embedding）
+            - text: ：使用 Embedding 模型（如 OpenAI text-embedding-3、BGE、GTE 等）将文本块转换为高维向量表示。
+          - listitem [ref=e206]:
+            - strong [ref=e207]: 向量存储（Vector Store）
+            - text: ：将向量存入向量数据库（如 FAISS、Milvus、Pinecone、Chroma 等），建立索引以支持高效检索。
+          - listitem [ref=e208]:
+            - strong [ref=e209]: 检索（Retrieval）
+            - text: ：根据用户查询检索最相关的文本块。常见策略包括相似度检索（Cosine Similarity）、最大边际相关（MMR，平衡相关性与多样性）以及混合检索（Hybrid Search，结合关键词与语义检索）。
+          - listitem [ref=e210]:
+            - strong [ref=e211]: 生成（Generation）
+            - text: ：将检索到的文档片段与用户问题组合成 prompt，送入 LLM 生成最终回答。
+        - blockquote [ref=e212]:
+          - paragraph [ref=e213]: 面试要点：重点说明每个步骤的关键决策点和 trade-off，尤其是 Chunking 策略和 Retrieval 策略的选择。
+        - 'heading "Q: 如何评估 RAG 系统的效果？" [level=3] [ref=e214]':
+          - link [ref=e215] [cursor=pointer]:
+            - /url: "#q-如何评估-rag-系统的效果"
+            - text: "#"
+          - text: "Q: 如何评估 RAG 系统的效果？"
+        - paragraph [ref=e216]: RAG 系统的评估需要从检索质量和生成质量两个维度进行：
+        - paragraph [ref=e217]:
+          - strong [ref=e218]: 检索评估指标
+          - text: ：
+        - list [ref=e219]:
+          - listitem [ref=e220]:
+            - strong [ref=e221]: Recall@K
+            - text: ：前 K 个检索结果中包含正确文档的比例，衡量检索的覆盖率。
+          - listitem [ref=e222]:
+            - strong [ref=e223]: MRR（Mean Reciprocal Rank）
+            - text: ：正确文档在检索结果中排名的倒数的平均值，衡量排序质量。
+          - listitem [ref=e224]:
+            - strong [ref=e225]: NDCG（Normalized Discounted Cumulative Gain）
+            - text: ：考虑位置权重的排序质量指标。
+        - paragraph [ref=e226]:
+          - strong [ref=e227]: 生成评估指标
+          - text: ：
+        - list [ref=e228]:
+          - listitem [ref=e229]:
+            - strong [ref=e230]: Faithfulness（忠实度）
+            - text: ：生成的回答是否忠实于检索到的上下文，是否存在"幻觉"。
+          - listitem [ref=e231]:
+            - strong [ref=e232]: Answer Relevancy（回答相关性）
+            - text: ：生成的回答是否与用户问题相关。
+          - listitem [ref=e233]:
+            - strong [ref=e234]: Context Relevancy（上下文相关性）
+            - text: ：检索到的上下文是否与用户问题相关。
+        - paragraph [ref=e235]:
+          - strong [ref=e236]: 常用评估框架
+          - text: ：
+          - code [ref=e237]: RAGAS
+          - text: 、
+          - code [ref=e238]: TruLens
+          - text: 、
+          - code [ref=e239]: DeepEval
+          - text: 等开源框架提供了端到端的 RAG 评估能力，支持自动化评估和人工评估相结合。
+        - blockquote [ref=e240]:
+          - paragraph [ref=e241]: 面试要点：能够区分检索端和生成端的评估指标，并说明为什么需要分别评估（检索好不等于生成好）。
+        - heading "Function Calling 相关" [level=2] [ref=e242]:
+          - link [ref=e243] [cursor=pointer]:
+            - /url: "#function-calling-相关"
+            - text: "#"
+          - text: Function Calling 相关
+        - 'heading "Q: Function Calling 的工作原理是什么？" [level=3] [ref=e244]':
+          - link [ref=e245] [cursor=pointer]:
+            - /url: "#q-function-calling-的工作原理是什么"
+            - text: "#"
+          - text: "Q: Function Calling 的工作原理是什么？"
+        - paragraph [ref=e246]: Function Calling 是让 LLM 能够结构化地调用外部工具的机制，其工作流程如下：
+        - list [ref=e247]:
+          - listitem [ref=e248]:
+            - strong [ref=e249]: 工具定义
+            - text: ：在 System Prompt 中以 JSON Schema 格式定义可用的工具列表，包括工具名称、功能描述和参数规格。
+          - listitem [ref=e250]:
+            - strong [ref=e251]: 决策与输出
+            - text: ：当 LLM 判断需要使用工具时，不会直接执行函数，而是生成一个结构化的 JSON 输出，包含要调用的函数名和参数。
+          - listitem [ref=e252]:
+            - strong [ref=e253]: 系统执行
+            - text: ：应用层解析 LLM 的结构化输出，在实际环境中执行对应的函数调用。
+          - listitem [ref=e254]:
+            - strong [ref=e255]: 结果回传
+            - text: ：将函数执行结果以文本形式反馈给 LLM，LLM 基于结果继续生成最终回答。
+        - paragraph [ref=e256]:
+          - text: 需要特别注意的是，
+          - strong [ref=e257]: LLM 本身并不执行任何函数
+          - text: ，它只是根据工具描述生成结构化的调用意图。真正的函数执行发生在应用层，这保证了安全性和可控性。
+        - blockquote [ref=e258]:
+          - paragraph [ref=e259]: 面试要点：强调 LLM 只是"生成调用意图"而非"执行函数"，这是面试官经常追问的点。
+        - 'heading "Q: 如何处理工具调用失败的情况？" [level=3] [ref=e260]':
+          - link [ref=e261] [cursor=pointer]:
+            - /url: "#q-如何处理工具调用失败的情况"
+            - text: "#"
+          - text: "Q: 如何处理工具调用失败的情况？"
+        - paragraph [ref=e262]: 工具调用失败是 Agent 系统中必须妥善处理的场景，常见策略包括：
+        - list [ref=e263]:
+          - listitem [ref=e264]:
+            - strong [ref=e265]: 重试与退避（Retry with Backoff）
+            - text: ：对于临时性错误（如网络超时），采用指数退避策略进行重试，避免频繁调用导致服务降级。
+          - listitem [ref=e266]:
+            - strong [ref=e267]: 降级到备选工具（Fallback）
+            - text: ：当主工具不可用时，自动切换到功能相似的备选工具。例如搜索引擎 A 不可用时切换到搜索引擎 B。
+          - listitem [ref=e268]:
+            - strong [ref=e269]: 通知用户并请求指导
+            - text: ：当 Agent 无法自行恢复时，向用户清晰地报告错误信息并请求进一步指示。
+          - listitem [ref=e270]:
+            - strong [ref=e271]: 优雅降级（Graceful Degradation）
+            - text: ：在工具完全不可用的情况下，Agent 基于自身知识尝试直接回答，并明确告知用户回答可能不够准确。
+        - blockquote [ref=e272]:
+          - paragraph [ref=e273]: 面试要点：体现"防御性编程"思维，说明在生产环境中工具调用的可靠性设计至关重要。
+        - heading "Multi-Agent 相关" [level=2] [ref=e274]:
+          - link [ref=e275] [cursor=pointer]:
+            - /url: "#multi-agent-相关"
+            - text: "#"
+          - text: Multi-Agent 相关
+        - 'heading "Q: Multi-Agent 系统的优缺点？" [level=3] [ref=e276]':
+          - link [ref=e277] [cursor=pointer]:
+            - /url: "#q-multi-agent-系统的优缺点"
+            - text: "#"
+          - text: "Q: Multi-Agent 系统的优缺点？"
+        - paragraph [ref=e278]:
+          - strong [ref=e279]: 优点
+          - text: ：
+        - list [ref=e280]:
+          - listitem [ref=e281]:
+            - strong [ref=e282]: 专业化分工
+            - text: ：每个 Agent 专注特定领域，可以使用不同的 prompt、工具和模型，实现专业化。
+          - listitem [ref=e283]:
+            - strong [ref=e284]: 并行执行
+            - text: ：独立的子任务可以由不同 Agent 并行处理，提升整体效率。
+          - listitem [ref=e285]:
+            - strong [ref=e286]: 模块化与可扩展性
+            - text: ：系统可以灵活地添加或移除 Agent，便于维护和扩展。
+          - listitem [ref=e287]:
+            - strong [ref=e288]: 容错能力
+            - text: ：单个 Agent 的失败不会导致整个系统崩溃。
+        - paragraph [ref=e289]:
+          - strong [ref=e290]: 缺点
+          - text: ：
+        - list [ref=e291]:
+          - listitem [ref=e292]:
+            - strong [ref=e293]: 协调开销
+            - text: ：Agent 之间的通信和任务分配需要额外的编排机制，增加了系统复杂度。
+          - listitem [ref=e294]:
+            - strong [ref=e295]: 通信成本
+            - text: ：Agent 之间的信息传递会消耗额外的 token，增加延迟和成本。
+          - listitem [ref=e296]:
+            - strong [ref=e297]: 调试困难
+            - text: ：分布式执行使得问题定位和调试更加复杂。
+          - listitem [ref=e298]:
+            - strong [ref=e299]: 一致性挑战
+            - text: ：多个 Agent 可能产生冲突的决策，需要冲突解决机制。
+        - blockquote [ref=e300]:
+          - paragraph [ref=e301]: 面试要点：能结合具体框架（如 AutoGen、CrewAI、LangGraph）说明 Multi-Agent 的实际应用场景和编排模式。
+        - 'heading "Q: 如何防止 Agent 陷入无限循环？" [level=3] [ref=e302]':
+          - link [ref=e303] [cursor=pointer]:
+            - /url: "#q-如何防止-agent-陷入无限循环"
+            - text: "#"
+          - text: "Q: 如何防止 Agent 陷入无限循环？"
+        - paragraph [ref=e304]: Agent 陷入无限循环是生产环境中常见的问题，防御措施包括：
+        - list [ref=e305]:
+          - listitem [ref=e306]:
+            - strong [ref=e307]: 最大迭代限制（Max Iterations）
+            - text: ：设置硬性的步骤数上限，超过限制后强制终止并返回当前最佳结果。
+          - listitem [ref=e308]:
+            - strong [ref=e309]: 循环检测（Loop Detection）
+            - text: ：记录 Agent 的历史动作序列，当检测到重复的行动模式时主动中断。
+          - listitem [ref=e310]:
+            - strong [ref=e311]: 置信度阈值（Confidence Threshold）
+            - text: ：当 Agent 在多轮迭代后仍无法达到预期置信度时，触发终止或转交人工处理。
+          - listitem [ref=e312]:
+            - strong [ref=e313]: Human-in-the-Loop 检查点
+            - text: ：在关键决策节点引入人工审核，防止 Agent 在错误方向上持续消耗资源。
+          - listitem [ref=e314]:
+            - strong [ref=e315]: Reflexion 式自我评估
+            - text: ：让 Agent 定期反思当前进展，如果判断无法完成任务则主动停止。
+        - blockquote [ref=e316]:
+          - paragraph [ref=e317]: 面试要点：说明防御机制应该是多层次的，结合硬限制和软判断共同保障系统稳定性。
+        - heading "高级话题" [level=2] [ref=e318]:
+          - link [ref=e319] [cursor=pointer]:
+            - /url: "#高级话题"
+            - text: "#"
+          - text: 高级话题
+        - 'heading "Q: 如何评估 Agent 的效果？" [level=3] [ref=e320]':
+          - link [ref=e321] [cursor=pointer]:
+            - /url: "#q-如何评估-agent-的效果"
+            - text: "#"
+          - text: "Q: 如何评估 Agent 的效果？"
+        - paragraph [ref=e322]: Agent 的评估比单纯的 LLM 评估更加复杂，需要综合多个维度：
+        - paragraph [ref=e323]:
+          - strong [ref=e324]: 主流 Benchmark
+          - text: ：
+        - list [ref=e325]:
+          - listitem [ref=e326]:
+            - strong [ref=e327]: AgentBench
+            - text: ：覆盖 8 个不同环境的综合 Agent 能力评测，包括操作系统、数据库、知识图谱等场景。
+          - listitem [ref=e328]:
+            - strong [ref=e329]: WebArena
+            - text: ：基于真实网站的 Agent 评测，测试 Agent 在网页环境中完成复杂任务的能力。
+          - listitem [ref=e330]:
+            - strong [ref=e331]: SWE-bench
+            - text: ：评估 Agent 解决真实 GitHub Issue 的能力，是代码 Agent 的重要评测基准。
+          - listitem [ref=e332]:
+            - strong [ref=e333]: GAIA
+            - text: ：通用 AI 助手评测基准，测试 Agent 在多步推理和工具使用方面的综合能力。
+        - paragraph [ref=e334]:
+          - strong [ref=e335]: 核心评估指标
+          - text: ：任务完成率（Task Completion Rate）、执行效率（步骤数/时间）、成本消耗（Token 费用）、安全性（是否有有害行为）。目前
+          - strong [ref=e336]: 人工评估仍然是金标准
+          - text: ，自动化评估与人工评估相结合是最佳实践。
+        - blockquote [ref=e337]:
+          - paragraph [ref=e338]: 面试要点：至少熟悉 2-3 个 Benchmark，能说明每个 Benchmark 侧重评估的能力维度。
+        - 'heading "Q: Agent 的安全性问题有哪些？" [level=3] [ref=e339]':
+          - link [ref=e340] [cursor=pointer]:
+            - /url: "#q-agent-的安全性问题有哪些"
+            - text: "#"
+          - text: "Q: Agent 的安全性问题有哪些？"
+        - paragraph [ref=e341]: Agent 系统面临的安全风险远超传统 LLM 应用，主要包括：
+        - list [ref=e342]:
+          - listitem [ref=e343]:
+            - strong [ref=e344]: Prompt 注入（Prompt Injection）
+            - text: ：恶意用户通过精心构造的输入劫持 Agent 行为，使其执行非预期操作。例如在检索到的文档中嵌入恶意指令。
+          - listitem [ref=e345]:
+            - strong [ref=e346]: 工具滥用（Tool Misuse）
+            - text: ：Agent 可能被诱导以有害的参数调用工具，如执行危险的系统命令或发送恶意请求。
+          - listitem [ref=e347]:
+            - strong [ref=e348]: 数据泄露（Data Leakage）
+            - text: ：Agent 在处理过程中可能无意间暴露敏感信息，如将内部数据包含在对外的 API 调用中。
+          - listitem [ref=e349]:
+            - strong [ref=e350]: 资源耗尽
+            - text: ：无限循环或大量无效调用可能导致计算资源和 API 配额的浪费。
+        - paragraph [ref=e351]:
+          - strong [ref=e352]: 缓解措施
+          - text: ：沙箱隔离（Sandboxing）、最小权限原则（Permission Systems）、输出验证（Output Validation）、速率限制（Rate Limiting）以及人工审核机制。
+        - blockquote [ref=e353]:
+          - paragraph [ref=e354]: 面试要点：安全性是 Agent 面试中的高频话题，要能从攻击面和防御面两个角度系统地阐述。
+        - 'heading "Q: LLM 的规划能力如何？有什么局限？" [level=3] [ref=e355]':
+          - link [ref=e356] [cursor=pointer]:
+            - /url: "#q-llm-的规划能力如何-有什么局限"
+            - text: "#"
+          - text: "Q: LLM 的规划能力如何？有什么局限？"
+        - paragraph [ref=e357]: 正如李宏毅老师所指出的，LLM 的规划能力"介于有和无之间"。在简单场景下 LLM 展现出了一定的规划能力，但在复杂约束条件下仍然存在明显局限：
+        - list [ref=e358]:
+          - listitem [ref=e359]:
+            - strong [ref=e360]: PlanBench
+            - text: 的实验结果表明，LLM 可以处理简单的序列规划任务，但在涉及复杂约束条件（如资源限制、时序依赖、互斥条件）时表现显著下降。
+          - listitem [ref=e361]:
+            - strong [ref=e362]: TravelPlanner
+            - text: 等测试显示，多约束规划（如同时考虑预算、时间、偏好、距离等多个维度）对 LLM 来说仍然极具挑战性。
+          - listitem [ref=e363]: LLM 的规划本质上是"基于模式匹配的推理"而非"基于搜索的最优规划"，在需要回溯和全局优化的场景下容易出错。
+        - paragraph [ref=e364]:
+          - strong [ref=e365]: 改进方向
+          - text: ：结合树搜索（Tree Search）算法增强探索能力、使用专门的推理模型（如 o1、DeepSeek-R1）、集成外部规划器（如 PDDL Solver）进行形式化规划，以及通过 Reflexion 等自我纠错机制提升规划的鲁棒性。
+        - blockquote [ref=e366]:
+          - paragraph [ref=e367]: 面试要点：引用具体的 Benchmark 结果来支撑论点，展现对领域前沿的了解深度。
+        - heading "推荐阅读" [level=2] [ref=e368]:
+          - link [ref=e369] [cursor=pointer]:
+            - /url: "#推荐阅读"
+            - text: "#"
+          - text: 推荐阅读
+        - list [ref=e370]:
+          - listitem [ref=e371]:
+            - strong [ref=e372]: AgentBench
+            - text: ：
+            - link "https://arxiv.org/abs/2308.03688" [ref=e373] [cursor=pointer]:
+              - /url: https://arxiv.org/abs/2308.03688
+          - listitem [ref=e374]:
+            - strong [ref=e375]: WebArena
+            - text: ：
+            - link "https://arxiv.org/abs/2307.13854" [ref=e376] [cursor=pointer]:
+              - /url: https://arxiv.org/abs/2307.13854
+          - listitem [ref=e377]:
+            - strong [ref=e378]: SWE-bench
+            - text: ：
+            - link "https://arxiv.org/abs/2310.06770" [ref=e379] [cursor=pointer]:
+              - /url: https://arxiv.org/abs/2310.06770
+          - listitem [ref=e380]:
+            - strong [ref=e381]: GAIA Benchmark
+            - text: ：
+            - link "https://arxiv.org/abs/2311.12983" [ref=e382] [cursor=pointer]:
+              - /url: https://arxiv.org/abs/2311.12983
+          - listitem [ref=e383]:
+            - strong [ref=e384]: "ReAct: Synergizing Reasoning and Acting"
+            - text: ：
+            - link "https://arxiv.org/abs/2210.03629" [ref=e385] [cursor=pointer]:
+              - /url: https://arxiv.org/abs/2210.03629
+          - listitem [ref=e386]:
+            - strong [ref=e387]: Lilian Weng - LLM Powered Autonomous Agents
+            - text: ：
+            - link "https://lilianweng.github.io/posts/2023-06-23-agent/" [ref=e388] [cursor=pointer]:
+              - /url: https://lilianweng.github.io/posts/2023-06-23-agent/
+    - contentinfo [ref=e390]:
+      - generic [ref=e391]: 默认页脚
+      - generic [ref=e392]: Copyright © 2023 杨景

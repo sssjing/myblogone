@@ -1,0 +1,769 @@
+- generic [ref=e2]:
+  - link "跳至主要內容" [ref=e3] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - link [ref=e7] [cursor=pointer]:
+        - /url: /myblogone/
+      - navigation [ref=e9]:
+        - link "My Blog" [ref=e11] [cursor=pointer]:
+          - /url: /myblogone/
+          - generic [ref=e12]: 
+          - text: My Blog
+        - link "脚本" [ref=e14] [cursor=pointer]:
+          - /url: /myblogone/posts/%E4%B8%AA%E4%BA%BA%E8%84%9A%E6%9C%AC/%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E7%BB%8F%E7%BA%AC%E5%BA%A6.html
+          - generic [ref=e15]: 
+          - text: 脚本
+        - link "Java" [ref=e17] [cursor=pointer]:
+          - /url: /myblogone/posts/Java/JVM/1.html
+          - generic [ref=e18]: 
+          - text: Java
+        - link "读书笔记" [ref=e20] [cursor=pointer]:
+          - /url: /myblogone/posts/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%A6%E9%80%8FSpring/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9ASpring%20Framework%E4%B8%AD%E7%9A%84IoC%E5%AE%B9%E5%99%A8.html
+          - generic [ref=e21]: 
+          - text: 读书笔记
+        - link "AI Agent" [ref=e23] [cursor=pointer]:
+          - /url: /myblogone/posts/ai-agent/
+          - generic [ref=e24]: 
+          - text: 分类
+        - link "分类" [ref=e26] [cursor=pointer]:
+          - /url: /myblogone/category
+          - generic [ref=e27]: 
+          - text: Bilibili
+          - generic [ref=e28]:
+            - img [ref=e29]
+            - generic [ref=e32]: open in new window
+      - generic [ref=e33]:
+        - button [ref=e35] [cursor=pointer]:
+          - img [ref=e36]
+        - search "搜索" [ref=e38] [cursor=pointer]:
+          - img "search icon" [ref=e39]
+    - text:     
+    - generic [ref=e42]:
+      - main [ref=e43]:
+        - list [ref=e44]:
+          - listitem [ref=e45] [cursor=pointer]:
+            - link "全部" [ref=e46]:
+              - /url: /myblogone/article/
+          - listitem [ref=e47] [cursor=pointer]:
+            - link "收藏" [ref=e48]:
+              - /url: /myblogone/star/
+        - generic [ref=e49]:
+          - article [ref=e51]:
+            - link "AI Agent 面经与面试题" [ref=e52] [cursor=pointer]:
+              - /url: /myblogone/posts/ai-agent/interview-guide.html
+              - generic [ref=e53]: AI Agent 面经与面试题
+            - paragraph [ref=e55]: 高频面试题整理：Agent 与 Chatbot 的区别、RAG vs Fine-tuning 选择、Function Calling 原理、Multi-Agent 优缺点、Agent 安全性问题、评估方法等核心知识点。
+            - separator [ref=e56]
+            - generic [ref=e57]:
+              - generic "作者" [ref=e58] [cursor=pointer]:
+                - img [ref=e59]
+                - link "杨景" [ref=e62]:
+                  - /url: https://github.com/sssjing/myblogone
+                - text: 作者
+              - generic "写作日期" [ref=e63] [cursor=pointer]:
+                - img [ref=e64]
+                - generic [ref=e66]: 2025-05-27
+                - text: 写作日期
+              - generic "阅读时间" [ref=e67] [cursor=pointer]:
+                - img [ref=e68]
+                - generic [ref=e70]: 大约 15 分钟
+                - text: 阅读时间
+              - generic "分类" [ref=e71] [cursor=pointer]:
+                - img [ref=e72]
+                - navigation [ref=e74]: ai-agent
+                - text: 分类
+          - article [ref=e76]:
+            - link "AI Agent 框架对比" [ref=e77] [cursor=pointer]:
+              - /url: /myblogone/posts/ai-agent/frameworks.html
+              - generic [ref=e78]: AI Agent 框架对比
+            - paragraph [ref=e80]: 全面对比 LangChain/LangGraph、CrewAI、AutoGen、MetaGPT、AutoGPT 等主流框架的特点、优劣势和适用场景。
+            - separator [ref=e81]
+            - generic [ref=e82]:
+              - generic "作者" [ref=e83] [cursor=pointer]:
+                - img [ref=e84]
+                - link "杨景" [ref=e87]:
+                  - /url: https://github.com/sssjing/myblogone
+                - text: 作者
+              - generic "写作日期" [ref=e88] [cursor=pointer]:
+                - img [ref=e89]
+                - generic [ref=e91]: 2025-05-27
+                - text: 写作日期
+              - generic "阅读时间" [ref=e92] [cursor=pointer]:
+                - img [ref=e93]
+                - generic [ref=e95]: 大约 12 分钟
+                - text: 阅读时间
+              - generic "分类" [ref=e96] [cursor=pointer]:
+                - img [ref=e97]
+                - navigation [ref=e99]: ai-agent
+                - text: 分类
+          - article [ref=e101]:
+            - link "记忆系统与规划能力" [ref=e102] [cursor=pointer]:
+              - /url: /myblogone/posts/ai-agent/memory-planning.html
+              - generic [ref=e103]: 记忆系统与规划能力
+            - paragraph [ref=e105]: Agent 记忆系统设计（短期记忆、长期记忆、反思模块）、向量检索算法（LSH、HNSW、FAISS）、规划能力评估与优化策略。
+            - separator [ref=e106]
+            - generic [ref=e107]:
+              - generic "作者" [ref=e108] [cursor=pointer]:
+                - img [ref=e109]
+                - link "杨景" [ref=e112]:
+                  - /url: https://github.com/sssjing/myblogone
+                - text: 作者
+              - generic "写作日期" [ref=e113] [cursor=pointer]:
+                - img [ref=e114]
+                - generic [ref=e116]: 2025-05-27
+                - text: 写作日期
+              - generic "阅读时间" [ref=e117] [cursor=pointer]:
+                - img [ref=e118]
+                - generic [ref=e120]: 大约 10 分钟
+                - text: 阅读时间
+              - generic "分类" [ref=e121] [cursor=pointer]:
+                - img [ref=e122]
+                - navigation [ref=e124]: ai-agent
+                - text: 分类
+          - article [ref=e126]:
+            - link "Function Calling 与工具使用" [ref=e127] [cursor=pointer]:
+              - /url: /myblogone/posts/ai-agent/tool-use.html
+              - generic [ref=e128]: Function Calling 与工具使用
+            - paragraph [ref=e130]: Function Calling 工作原理、工具描述设计、工具过多时的 RAG 检索方案、工具结果校准、MCP 协议介绍。
+            - separator [ref=e131]
+            - generic [ref=e132]:
+              - generic "作者" [ref=e133] [cursor=pointer]:
+                - img [ref=e134]
+                - link "杨景" [ref=e137]:
+                  - /url: https://github.com/sssjing/myblogone
+                - text: 作者
+              - generic "写作日期" [ref=e138] [cursor=pointer]:
+                - img [ref=e139]
+                - generic [ref=e141]: 2025-05-27
+                - text: 写作日期
+              - generic "阅读时间" [ref=e142] [cursor=pointer]:
+                - img [ref=e143]
+                - generic [ref=e145]: 大约 8 分钟
+                - text: 阅读时间
+              - generic "分类" [ref=e146] [cursor=pointer]:
+                - img [ref=e147]
+                - navigation [ref=e149]: ai-agent
+                - text: 分类
+          - article [ref=e151]:
+            - link "ReAct 模式与 Agent 架构" [ref=e152] [cursor=pointer]:
+              - /url: /myblogone/posts/ai-agent/react-pattern.html
+              - generic [ref=e153]: ReAct 模式与 Agent 架构
+            - paragraph [ref=e155]: 从 Chain-of-Thought 到 ReAct 的演进，Thought-Action-Observation 循环详解，Anthropic 五大工作流模式。
+            - separator [ref=e156]
+            - generic [ref=e157]:
+              - generic "作者" [ref=e158] [cursor=pointer]:
+                - img [ref=e159]
+                - link "杨景" [ref=e162]:
+                  - /url: https://github.com/sssjing/myblogone
+                - text: 作者
+              - generic "写作日期" [ref=e163] [cursor=pointer]:
+                - img [ref=e164]
+                - generic [ref=e166]: 2025-05-27
+                - text: 写作日期
+              - generic "阅读时间" [ref=e167] [cursor=pointer]:
+                - img [ref=e168]
+                - generic [ref=e170]: 大约 10 分钟
+                - text: 阅读时间
+              - generic "分类" [ref=e171] [cursor=pointer]:
+                - img [ref=e172]
+                - navigation [ref=e174]: ai-agent
+                - text: 分类
+          - article [ref=e176]:
+            - link "AI Agent 基础概念" [ref=e177] [cursor=pointer]:
+              - /url: /myblogone/posts/ai-agent/agent-basics.html
+              - generic [ref=e178]: AI Agent 基础概念
+            - paragraph [ref=e180]: 什么是 AI Agent？Agent 的核心架构（Planning + Memory + Tool Use）、Agency Level 分级、发展历程与应用场景。
+            - separator [ref=e181]
+            - generic [ref=e182]:
+              - generic "作者" [ref=e183] [cursor=pointer]:
+                - img [ref=e184]
+                - link "杨景" [ref=e187]:
+                  - /url: https://github.com/sssjing/myblogone
+                - text: 作者
+              - generic "写作日期" [ref=e188] [cursor=pointer]:
+                - img [ref=e189]
+                - generic [ref=e191]: 2025-05-27
+                - text: 写作日期
+              - generic "阅读时间" [ref=e192] [cursor=pointer]:
+                - img [ref=e193]
+                - generic [ref=e195]: 大约 8 分钟
+                - text: 阅读时间
+              - generic "分类" [ref=e196] [cursor=pointer]:
+                - img [ref=e197]
+                - navigation [ref=e199]: ai-agent
+                - text: 分类
+          - article [ref=e201]:
+            - link "图的拓扑序列" [ref=e202] [cursor=pointer]:
+              - /url: /myblogone/posts/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/%E6%90%9C%E7%B4%A2%E4%B8%8E%E5%9B%BE%E8%AE%BA/%E5%9B%BE%E7%9A%84%E6%8B%93%E6%89%91%E5%BA%8F%E5%88%97.html
+              - generic [ref=e203]: 图的拓扑序列
+            - generic [ref=e204]:
+              - generic "作者🖊" [ref=e205] [cursor=pointer]:
+                - img [ref=e206]
+                - link "杨景" [ref=e209]:
+                  - /url: https://github.com/sssjing/myblogone
+                - text: 作者🖊
+              - generic "写作日期📅" [ref=e210] [cursor=pointer]:
+                - img [ref=e211]
+                - generic [ref=e213]: 2025-05-27
+                - text: 写作日期📅
+              - generic "阅读时间⌛" [ref=e214] [cursor=pointer]:
+                - img [ref=e215]
+                - generic [ref=e217]: 大约 15 分钟
+                - text: 阅读时间⌛
+              - generic "分类🌈" [ref=e218] [cursor=pointer]:
+                - img [ref=e219]
+                - navigation [ref=e221]: ai-agent
+                - text: 分类🌈
+            - generic [ref=e222]:
+              - list [ref=e223]:
+                - listitem [ref=e224]:
+                  - paragraph [ref=e225]: 有向图
+                - listitem [ref=e226]:
+                  - paragraph [ref=e227]: 不能有环
+                - listitem [ref=e228]:
+                  - paragraph [ref=e229]: 所有边都是从前指向后的
+                - listitem [ref=e230]:
+                  - paragraph [ref=e231]: 有向无环图一定存在拓扑序列
+                - listitem [ref=e232]:
+                  - paragraph [ref=e233]: 有向无环图也被称为拓扑图
+              - paragraph [ref=e234]: 有向图里有两个度数：入度和出度
+              - list [ref=e235]:
+                - listitem [ref=e236]: 入度：有多少边指向自己
+                - listitem [ref=e237]: 出度：有多少边指出去
+                - listitem [ref=e238]: 入度为0表示没有任何一条边指向自己，可以作为起点
+                - listitem [ref=e239]: 一个有向无环图一定至少存在一个入度为0的点
+              - generic [ref=e240]:
+                - text: cpp
+                - code [ref=e242]: "queue <- 所有入度为0的点 while queue 不空 { t <- 队头 枚举所有t的出边 t -> j 删掉 t -> j d[j] -- if d[j] == 0; queue <- j }"
+            - separator [ref=e254]
+            - generic [ref=e255]:
+              - generic "作者🖊" [ref=e256] [cursor=pointer]:
+                - img "author icon" [ref=e257]
+                - link "杨景" [ref=e260]:
+                  - /url: https://github.com/sssjing/myblogone
+                - text: 作者🖊
+              - generic "写作日期📅" [ref=e261] [cursor=pointer]:
+                - img "calendar icon" [ref=e262]
+                - generic [ref=e264]: 2023年6月13日
+                - text: 写作日期📅
+              - generic "阅读时间⌛" [ref=e265] [cursor=pointer]:
+                - img "timer icon" [ref=e266]
+                - generic [ref=e268]: 大约 1 分钟
+                - text: 阅读时间⌛
+          - article [ref=e270]:
+            - link "Netty原理与API网关" [ref=e271] [cursor=pointer]:
+              - /url: /myblogone/posts/Java/NIO/2.html
+              - generic [ref=e272]: Netty原理与API网关
+            - generic [ref=e273]:
+              - generic "作者🖊" [ref=e274] [cursor=pointer]:
+                - img [ref=e275]
+                - link "杨景" [ref=e278]:
+                  - /url: https://github.com/sssjing/myblogone
+                - text: 作者🖊
+              - generic "写作日期📅" [ref=e279] [cursor=pointer]:
+                - img [ref=e280]
+                - generic [ref=e282]: 2025-05-27
+                - text: 写作日期📅
+              - generic "阅读时间⌛" [ref=e283] [cursor=pointer]:
+                - img [ref=e284]
+                - generic [ref=e286]: 大约 12 分钟
+                - text: 阅读时间⌛
+              - generic "分类🌈" [ref=e287] [cursor=pointer]:
+                - img [ref=e288]
+                - navigation [ref=e290]: ai-agent
+                - text: 分类🌈
+            - separator [ref=e291]
+            - generic [ref=e292]:
+              - generic "作者🖊" [ref=e293] [cursor=pointer]:
+                - img "author icon" [ref=e294]
+                - link "杨景" [ref=e297]:
+                  - /url: https://github.com/sssjing/myblogone
+                - text: 作者🖊
+              - generic "写作日期📅" [ref=e298] [cursor=pointer]:
+                - img "calendar icon" [ref=e299]
+                - generic [ref=e301]: 2023年6月12日
+                - text: 写作日期📅
+              - generic "阅读时间⌛" [ref=e302] [cursor=pointer]:
+                - img "timer icon" [ref=e303]
+                - generic [ref=e305]: 小于 1 分钟
+                - text: 阅读时间⌛
+              - generic "分类🌈" [ref=e306] [cursor=pointer]:
+                - img "category icon" [ref=e307]
+                - navigation [ref=e309]: java
+                - text: 分类🌈
+          - article [ref=e311]:
+            - link "JVM虚拟机" [ref=e312] [cursor=pointer]:
+              - /url: /myblogone/posts/Java/JVM/1.html
+              - generic [ref=e313]: JVM虚拟机
+            - generic [ref=e314]:
+              - generic "作者🖊" [ref=e315] [cursor=pointer]:
+                - img [ref=e316]
+                - link "杨景" [ref=e319]:
+                  - /url: https://github.com/sssjing/myblogone
+                - text: 作者🖊
+              - generic "写作日期📅" [ref=e320] [cursor=pointer]:
+                - img [ref=e321]
+                - generic [ref=e323]: 2025-05-27
+                - text: 写作日期📅
+              - generic "阅读时间⌛" [ref=e324] [cursor=pointer]:
+                - img [ref=e325]
+                - generic [ref=e327]: 大约 10 分钟
+                - text: 阅读时间⌛
+              - generic "分类🌈" [ref=e328] [cursor=pointer]:
+                - img [ref=e329]
+                - navigation [ref=e331]: ai-agent
+                - text: 分类🌈
+            - generic [ref=e332]:
+              - heading "什么是字节码" [level=2] [ref=e333]
+              - paragraph [ref=e334]: Java bytecode 由单字节（byte）的指令组成，理论上最多支持 256 个操作码（opcode）。实际上 Java 只使用了200左右的操作码， 还有一些操作码则保留给调试操作。根据指令的性质，主要分为四个大类：
+              - list [ref=e335]:
+                - listitem [ref=e336]: 栈操作指令，包括与局部变量交互的指令
+                - listitem [ref=e337]: 程序流程控制指令
+                - listitem [ref=e338]: 对象操作指令，包括方法调用指令
+                - listitem [ref=e339]: 算术运算以及类型转换指令
+              - paragraph [ref=e340]:
+                - code [ref=e341]: javac
+                - text: 编译以下代码
+              - generic [ref=e342]:
+                - text: java
+                - code [ref=e344]:
+                  - text: package
+                  - generic [ref=e345]: com.zyf.
+                  - text: "JVM; public class HelloByteCode { public static void main(String[] args){ HelloByteCode obj = new HelloByteCode(); } }"
+            - separator [ref=e355]
+            - generic [ref=e356]:
+              - generic "作者🖊" [ref=e357] [cursor=pointer]:
+                - img "author icon" [ref=e358]
+                - link "杨景" [ref=e361]:
+                  - /url: https://github.com/sssjing/myblogone
+                - text: 作者🖊
+              - generic "写作日期📅" [ref=e362] [cursor=pointer]:
+                - img "calendar icon" [ref=e363]
+                - generic [ref=e365]: 2023年6月11日
+                - text: 写作日期📅
+              - generic "阅读时间⌛" [ref=e366] [cursor=pointer]:
+                - img "timer icon" [ref=e367]
+                - generic [ref=e369]: 大约 2 分钟
+                - text: 阅读时间⌛
+          - article [ref=e371]:
+            - link "java Socket 编程" [ref=e372] [cursor=pointer]:
+              - /url: /myblogone/posts/Java/NIO/1.html
+              - generic [ref=e373]: java Socket 编程
+            - generic [ref=e374]:
+              - generic "作者🖊" [ref=e375] [cursor=pointer]:
+                - img [ref=e376]
+                - link "杨景" [ref=e379]:
+                  - /url: https://github.com/sssjing/myblogone
+                - text: 作者🖊
+              - generic "写作日期📅" [ref=e380] [cursor=pointer]:
+                - img [ref=e381]
+                - generic [ref=e383]: 2025-05-27
+                - text: 写作日期📅
+              - generic "阅读时间⌛" [ref=e384] [cursor=pointer]:
+                - img [ref=e385]
+                - generic [ref=e387]: 大约 8 分钟
+                - text: 阅读时间⌛
+              - generic "分类🌈" [ref=e388] [cursor=pointer]:
+                - img [ref=e389]
+                - navigation [ref=e391]: ai-agent
+                - text: 分类🌈
+            - generic [ref=e392]:
+              - heading "服务器通信原理" [level=2] [ref=e393]
+              - figure "服务器通信原理"
+              - heading "Java实现一个最简的HTTP服务器" [level=3] [ref=e394]
+              - generic [ref=e395]:
+                - text: java
+                - code [ref=e397]:
+                  - text: package
+                  - generic [ref=e398]: com.zyf.nio
+                  - text: ; import
+                  - generic [ref=e399]:
+                    - generic [ref=e400]: java.io.
+                    - text: IOException
+                  - text: ; import
+                  - generic [ref=e401]:
+                    - generic [ref=e402]: java.io.
+                    - text: PrintWriter
+                  - text: ; import
+                  - generic [ref=e403]:
+                    - generic [ref=e404]: java.net.
+                    - text: ServerSocket
+                  - text: ; import
+                  - generic [ref=e405]:
+                    - generic [ref=e406]: java.net.
+                    - text: Socket
+                  - text: "; public class HttpServer01 { public static void main(String[] args) throws IOException { ServerSocket serverSocket = new ServerSocket(8801); while (true) { try { Socket socket = serverSocket.accept(); // 阻塞 server(socket); } catch (Exception e) { e.printStackTrace(); } } } private static void server(Socket socket) throws IOException { try { PrintWriter printWriter = new PrintWriter(socket.getOutputStream(), true); // true表示自动刷新 printWriter.println(\"HTTP/1.1 200 OK\"); // 返回响应头 printWriter.println(\"Content-Type:text/html;charset=utf-8\"); // 返回响应头 String body = \"hello,nio1\"; // 返回响应体 printWriter.println(\"Content-Length:\" + body.getBytes().length); // 返回响应头 printWriter.println(); // 返回空行 printWriter.write(body); // 返回响应体 printWriter.close(); // 关闭流 socket.close(); } catch (IOException e) { e.printStackTrace(); } } }"
+            - separator [ref=e443]
+            - generic [ref=e444]:
+              - generic "作者🖊" [ref=e445] [cursor=pointer]:
+                - img "author icon" [ref=e446]
+                - link "杨景" [ref=e449]:
+                  - /url: https://github.com/sssjing/myblogone
+                - text: 作者🖊
+              - generic "写作日期📅" [ref=e450] [cursor=pointer]:
+                - img "calendar icon" [ref=e451]
+                - generic [ref=e453]: 2023年6月11日
+                - text: 写作日期📅
+              - generic "阅读时间⌛" [ref=e454] [cursor=pointer]:
+                - img "timer icon" [ref=e455]
+                - generic [ref=e457]: 大约 5 分钟
+                - text: 阅读时间⌛
+          - article [ref=e459]:
+            - link "饥饿的牛" [ref=e460] [cursor=pointer]:
+              - /url: /myblogone/posts/%E7%AE%97%E6%B3%95/%E5%A4%8F%E5%AD%A3%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/%E9%A5%A5%E9%A5%BF%E7%9A%84%E7%89%9B.html
+              - generic [ref=e461]: 饥饿的牛
+            - generic [ref=e462]:
+              - generic "作者🖊" [ref=e463] [cursor=pointer]:
+                - img [ref=e464]
+                - link "杨景" [ref=e467]:
+                  - /url: https://github.com/sssjing/myblogone
+                - text: 作者🖊
+              - generic "写作日期📅" [ref=e468] [cursor=pointer]:
+                - img [ref=e469]
+                - generic [ref=e471]: 2025-05-27
+                - text: 写作日期📅
+              - generic "阅读时间⌛" [ref=e472] [cursor=pointer]:
+                - img [ref=e473]
+                - generic [ref=e475]: 大约 10 分钟
+                - text: 阅读时间⌛
+              - generic "分类🌈" [ref=e476] [cursor=pointer]:
+                - img [ref=e477]
+                - navigation [ref=e479]: ai-agent
+                - text: 分类🌈
+            - generic [ref=e481]:
+              - text: java
+              - code [ref=e483]:
+                - text: import
+                - generic [ref=e484]:
+                  - generic [ref=e485]: java.util.
+                  - text: "*"
+                - text: "; public class Main{ public static void main(String[] args){ Scanner scanner = new Scanner(System.in); int n = scanner.nextInt(); long t = scanner.nextLong(); long cur = 1, cnt = 0; long res = 0; for(int i = 0; i < n; i++){ long d = scanner.nextLong(); long b = scanner.nextLong(); long tmp = Math.min(cnt, d - cur); res += tmp; cur = d; cnt -= tmp; cnt += b; } System.out.println(res + Math.min(cnt, t - cur + 1)); } }"
+            - separator [ref=e507]
+            - generic [ref=e508]:
+              - generic "作者🖊" [ref=e509] [cursor=pointer]:
+                - img "author icon" [ref=e510]
+                - link "杨景" [ref=e513]:
+                  - /url: https://github.com/sssjing/myblogone
+                - text: 作者🖊
+              - generic "写作日期📅" [ref=e514] [cursor=pointer]:
+                - img "calendar icon" [ref=e515]
+                - generic [ref=e517]: 2023年6月7日
+                - text: 写作日期📅
+              - generic "阅读时间⌛" [ref=e518] [cursor=pointer]:
+                - img "timer icon" [ref=e519]
+                - generic [ref=e521]: 小于 1 分钟
+                - text: 阅读时间⌛
+          - article [ref=e523]:
+            - link "BFS" [ref=e524] [cursor=pointer]:
+              - /url: /myblogone/posts/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/%E6%90%9C%E7%B4%A2%E4%B8%8E%E5%9B%BE%E8%AE%BA/BFS.html
+              - generic [ref=e525]: BFS
+            - generic [ref=e526]:
+              - generic "作者🖊" [ref=e527] [cursor=pointer]:
+                - img [ref=e528]
+                - link "杨景" [ref=e531]:
+                  - /url: https://github.com/sssjing/myblogone
+                - text: 作者🖊
+              - generic "写作日期📅" [ref=e532] [cursor=pointer]:
+                - img [ref=e533]
+                - generic [ref=e535]: 2025-05-27
+                - text: 写作日期📅
+              - generic "阅读时间⌛" [ref=e536] [cursor=pointer]:
+                - img [ref=e537]
+                - generic [ref=e539]: 大约 8 分钟
+                - text: 阅读时间⌛
+              - generic "分类🌈" [ref=e540] [cursor=pointer]:
+                - img [ref=e541]
+                - navigation [ref=e543]: ai-agent
+                - text: 分类🌈
+            - generic [ref=e544]:
+              - list [ref=e545]:
+                - listitem [ref=e546]:
+                  - text: 最短路
+                  - list [ref=e547]:
+                    - listitem [ref=e548]: 搜索所有距离为1的点
+                    - listitem [ref=e549]: 搜索所有距离为2的点
+                    - listitem [ref=e550]: 搜索所有距离为3的点
+                    - listitem [ref=e551]: ...
+                - listitem [ref=e552]: DP问题可以看成一种特殊的最短路问题
+              - heading "例子" [level=2] [ref=e553]
+              - heading "走迷宫" [level=3] [ref=e554]
+              - paragraph
+              - generic [ref=e555]:
+                - text: cpp
+                - code [ref=e557]:
+                  - generic [ref=e558]: "#include <iostream>"
+                  - generic [ref=e559]: "#include <algorithm>"
+                  - generic [ref=e560]: "#include <cstring>"
+                  - text: "using namespace std; typedef pair<int, int> PII; const int N = 110; int n, m; int g[N][N]; // 存储地图 int d[N][N]; // 每一个点到起点的距离 PII q[N * N]; // 队列 int bfs() { int hh = 0, tt = 0; // 队列头和队列尾 q[0] = {0, 0}; // 起点 memset(d, -1, sizeof d); // 初始化所有点到起点的距离为-1 d[0][0] = 0; // 起点到起点的距离为0 int dy[4] = {0, 1, 0, -1}; int dx[4] = {-1, 0, 1, 0}; // 方向数组 while (hh <= tt) { auto t = q[hh++]; for (int i = 0; i < 4; i++) { int x = t.first + dx[i], y = t.second + dy[i]; if (x >= 0 && x < n && y >= 0 && y < m && g[x][y] == 0 && d[x][y] == -1) { d[x][y] = d[t.first][t.second] + 1; q[++tt] = {x, y}; } } } return d[n - 1][m - 1]; } int main() { cin >> n >> m; for (int i = 0; i < n; i++) for (int j = 0; j < m; j++) cin >> g[i][j]; cout << bfs() << endl; return 0; }"
+            - separator [ref=e605]
+            - generic [ref=e606]:
+              - generic "作者🖊" [ref=e607] [cursor=pointer]:
+                - img "author icon" [ref=e608]
+                - link "杨景" [ref=e611]:
+                  - /url: https://github.com/sssjing/myblogone
+                - text: 作者🖊
+              - generic "写作日期📅" [ref=e612] [cursor=pointer]:
+                - img "calendar icon" [ref=e613]
+                - generic [ref=e615]: 2023年6月4日
+                - text: 写作日期📅
+              - generic "阅读时间⌛" [ref=e616] [cursor=pointer]:
+                - img "timer icon" [ref=e617]
+                - generic [ref=e619]: 大约 2 分钟
+                - text: 阅读时间⌛
+          - article [ref=e621]:
+            - link "树和图的存储及遍历" [ref=e622] [cursor=pointer]:
+              - /url: /myblogone/posts/%E7%AE%97%E6%B3%95%E5%9F%BA%E7%A1%80/%E6%90%9C%E7%B4%A2%E4%B8%8E%E5%9B%BE%E8%AE%BA/%E5%9B%BE%E7%9A%84%E6%8B%93%E6%89%91%E5%BA%8F%E5%88%97.html
+              - generic [ref=e623]: 树和图的存储及遍历
+            - generic [ref=e624]:
+              - list [ref=e625]:
+                - listitem [ref=e626]:
+                  - paragraph [ref=e627]: 有向图
+                - listitem [ref=e628]:
+                  - paragraph [ref=e629]: 不能有环
+                - listitem [ref=e630]:
+                  - paragraph [ref=e631]: 所有边都是从前指向后的
+                - listitem [ref=e632]:
+                  - paragraph [ref=e633]: 有向无环图一定存在拓扑序列
+                - listitem [ref=e634]:
+                  - paragraph [ref=e635]: 有向无环图也被称为拓扑图
+              - paragraph [ref=e636]: 有向图里有两个度数：入度和出度
+              - list [ref=e637]:
+                - listitem [ref=e638]: 入度：有多少边指向自己
+                - listitem [ref=e639]: 出度：有多少边指出去
+                - listitem [ref=e640]: 入度为0表示没有任何一条边指向自己，可以作为起点
+                - listitem [ref=e641]: 一个有向无环图一定至少存在一个入度为0的点
+              - generic [ref=e642]:
+                - text: cpp
+                - code [ref=e644]: "queue <- 所有入度为0的点 while queue 不空 { t <- 队头 枚举所有t的出边 t -> j 删掉 t -> j d[j] -- if d[j] == 0; queue <- j }"
+            - separator [ref=e656]
+            - generic [ref=e657]:
+              - generic "作者🖊" [ref=e658] [cursor=pointer]:
+                - img "author icon" [ref=e659]
+                - link "杨景" [ref=e662]:
+                  - /url: https://github.com/sssjing/myblogone
+                - text: 作者🖊
+              - generic "写作日期📅" [ref=e663] [cursor=pointer]:
+                - img "calendar icon" [ref=e664]
+                - generic [ref=e666]: 2023年6月4日
+                - text: 写作日期📅
+              - generic "阅读时间⌛" [ref=e667] [cursor=pointer]:
+                - img "timer icon" [ref=e668]
+                - generic [ref=e670]: 大约 4 分钟
+                - text: 阅读时间⌛
+          - article [ref=e672]:
+            - link "DFS" [ref=e673] [cursor=pointer]:
+              - /url: /myblogone/posts/Java/NIO/2.html
+              - generic [ref=e674]: DFS
+            - generic [ref=e675]:
+              - heading "DFS 与BFS简单对比" [level=2] [ref=e676]
+              - list [ref=e677]:
+                - listitem [ref=e678]:
+                  - text: DFS
+                  - list [ref=e679]:
+                    - listitem [ref=e680]: 栈steak
+                    - listitem [ref=e681]: 空间O（n）
+                - listitem [ref=e682]:
+                  - text: BFS
+                  - list [ref=e683]:
+                    - listitem [ref=e684]: queue
+                    - listitem [ref=e685]: 空间（2^n）
+                    - listitem [ref=e686]: 最短路
+              - heading "DFS" [level=2] [ref=e687]
+              - list [ref=e688]:
+                - listitem [ref=e689]: 回溯
+                - listitem [ref=e690]: 剪枝
+                - listitem [ref=e691]: 每个DFS都对应一个搜索树
+                - listitem [ref=e692]: 俗称爆搜
+                - listitem [ref=e693]: 顺序
+              - heading "例子" [level=2] [ref=e694]
+              - heading "排列数字" [level=3] [ref=e695]
+              - generic [ref=e696]:
+                - text: text
+                - code [ref=e698]: 给定一个整数n将数字1∼n排成一排，将会有很多种排列方法。 现在，请你按照字典序将所有的排列方法输出。 输入格式 共一行，包含一个整数n。 输出格式 按字典序输出所有排列方案，每个方案占一行。 输入样例： 3 输出样例： 1 2 3 1 3 2 2 1 3 2 3 1 3 1 2 3 2 1
+            - separator [ref=e715]
+            - generic [ref=e716]:
+              - generic "作者🖊" [ref=e717] [cursor=pointer]:
+                - img "author icon" [ref=e718]
+                - link "杨景" [ref=e721]:
+                  - /url: https://github.com/sssjing/myblogone
+                - text: 作者🖊
+              - generic "写作日期📅" [ref=e722] [cursor=pointer]:
+                - img "calendar icon" [ref=e723]
+                - generic [ref=e725]: 2023年6月3日
+                - text: 写作日期📅
+              - generic "阅读时间⌛" [ref=e726] [cursor=pointer]:
+                - img "timer icon" [ref=e727]
+                - generic [ref=e729]: 大约 6 分钟
+                - text: 阅读时间⌛
+          - article [ref=e731]:
+            - link "STL使用技巧" [ref=e732] [cursor=pointer]:
+              - /url: /myblogone/posts/Java/JVM/1.html
+              - generic [ref=e733]: STL使用技巧
+            - generic [ref=e734]:
+              - heading "什么是字节码" [level=2] [ref=e735]
+              - paragraph [ref=e736]: Java bytecode 由单字节（byte）的指令组成，理论上最多支持 256 个操作码（opcode）。实际上 Java 只使用了200左右的操作码， 还有一些操作码则保留给调试操作。根据指令的性质，主要分为四个大类：
+              - list [ref=e737]:
+                - listitem [ref=e738]: 栈操作指令，包括与局部变量交互的指令
+                - listitem [ref=e739]: 程序流程控制指令
+                - listitem [ref=e740]: 对象操作指令，包括方法调用指令
+                - listitem [ref=e741]: 算术运算以及类型转换指令
+              - paragraph [ref=e742]:
+                - code [ref=e743]: javac
+                - text: 编译以下代码
+              - generic [ref=e744]:
+                - text: java
+                - code [ref=e746]:
+                  - text: package
+                  - generic [ref=e747]: com.zyf.
+                  - text: "JVM; public class HelloByteCode { public static void main(String[] args){ HelloByteCode obj = new HelloByteCode(); } }"
+            - separator [ref=e757]
+            - generic [ref=e758]:
+              - generic "作者🖊" [ref=e759] [cursor=pointer]:
+                - img "author icon" [ref=e760]
+                - link "杨景" [ref=e763]:
+                  - /url: https://github.com/sssjing/myblogone
+                - text: 作者🖊
+              - generic "写作日期📅" [ref=e764] [cursor=pointer]:
+                - img "calendar icon" [ref=e765]
+                - generic [ref=e767]: 2023年6月1日
+                - text: 写作日期📅
+              - generic "阅读时间⌛" [ref=e768] [cursor=pointer]:
+                - img "timer icon" [ref=e769]
+                - generic [ref=e771]: 大约 3 分钟
+                - text: 阅读时间⌛
+              - generic "分类🌈" [ref=e772] [cursor=pointer]:
+                - img "category icon" [ref=e773]
+                - navigation [ref=e775]: 数据结构
+                - navigation [ref=e776]: 算法
+                - text: 分类🌈
+          - article [ref=e778]:
+            - link "19.高级特性" [ref=e779] [cursor=pointer]:
+              - /url: /myblogone/posts/Java/NIO/1.html
+              - generic [ref=e780]: 19.高级特性
+            - generic [ref=e781]:
+              - heading "服务器通信原理" [level=2] [ref=e782]
+              - figure "服务器通信原理"
+              - heading "Java实现一个最简的HTTP服务器" [level=3] [ref=e783]
+              - generic [ref=e784]:
+                - text: java
+                - code [ref=e786]:
+                  - text: package
+                  - generic [ref=e787]: com.zyf.nio
+                  - text: ; import
+                  - generic [ref=e788]:
+                    - generic [ref=e789]: java.io.
+                    - text: IOException
+                  - text: ; import
+                  - generic [ref=e790]:
+                    - generic [ref=e791]: java.io.
+                    - text: PrintWriter
+                  - text: ; import
+                  - generic [ref=e792]:
+                    - generic [ref=e793]: java.net.
+                    - text: ServerSocket
+                  - text: ; import
+                  - generic [ref=e794]:
+                    - generic [ref=e795]: java.net.
+                    - text: Socket
+                  - text: "; public class HttpServer01 { public static void main(String[] args) throws IOException { ServerSocket serverSocket = new ServerSocket(8801); while (true) { try { Socket socket = serverSocket.accept(); // 阻塞 server(socket); } catch (Exception e) { e.printStackTrace(); } } } private static void server(Socket socket) throws IOException { try { PrintWriter printWriter = new PrintWriter(socket.getOutputStream(), true); // true表示自动刷新 printWriter.println(\"HTTP/1.1 200 OK\"); // 返回响应头 printWriter.println(\"Content-Type:text/html;charset=utf-8\"); // 返回响应头 String body = \"hello,nio1\"; // 返回响应体 printWriter.println(\"Content-Length:\" + body.getBytes().length); // 返回响应头 printWriter.println(); // 返回空行 printWriter.write(body); // 返回响应体 printWriter.close(); // 关闭流 socket.close(); } catch (IOException e) { e.printStackTrace(); } } }"
+            - separator [ref=e832]
+            - generic [ref=e833]:
+              - generic "作者🖊" [ref=e834] [cursor=pointer]:
+                - img "author icon" [ref=e835]
+                - link "杨景" [ref=e838]:
+                  - /url: https://github.com/sssjing/myblogone
+                - text: 作者🖊
+              - generic "写作日期📅" [ref=e839] [cursor=pointer]:
+                - img "calendar icon" [ref=e840]
+                - generic [ref=e842]: 2023年5月28日
+                - text: 写作日期📅
+              - generic "阅读时间⌛" [ref=e843] [cursor=pointer]:
+                - img "timer icon" [ref=e844]
+                - generic [ref=e846]: 大约 11 分钟
+                - text: 阅读时间⌛
+              - generic "分类🌈" [ref=e847] [cursor=pointer]:
+                - img "category icon" [ref=e848]
+                - navigation [ref=e850]: rust
+                - text: 分类🌈
+          - generic [ref=e852]:
+            - generic [ref=e853]:
+              - navigation [ref=e854]: "1"
+              - navigation [ref=e855]: "2"
+              - navigation [ref=e856]: "3"
+              - navigation [ref=e857]: "4"
+              - navigation [ref=e858]: "5"
+              - navigation [ref=e859]: "6"
+              - navigation [ref=e860]: 下一页
+            - generic [ref=e861]:
+              - text: "跳转到:"
+              - textbox "跳转到:" [ref=e862]
+              - navigation "前往" [ref=e863]
+      - complementary [ref=e864]:
+        - generic [ref=e865]:
+          - navigation "个人介绍" [ref=e866] [cursor=pointer]:
+            - img "Blogger Avatar" [ref=e867]
+            - generic [ref=e868]: 杨景
+            - generic [ref=e869]: 欢迎来到我的博客
+            - text: 个人介绍
+          - generic [ref=e870]:
+            - link "57 文章" [ref=e871] [cursor=pointer]:
+              - /url: /myblogone/article/
+              - generic [ref=e872]: "57"
+              - generic [ref=e873]: 文章
+            - link "15 分类" [ref=e874] [cursor=pointer]:
+              - /url: /myblogone/category/
+              - generic [ref=e875]: "15"
+              - generic [ref=e876]: 分类
+            - link "8 标签" [ref=e877] [cursor=pointer]:
+              - /url: /myblogone/tag/
+              - generic [ref=e878]: "8"
+              - generic [ref=e879]: 标签
+            - link "43 时间轴" [ref=e880] [cursor=pointer]:
+              - /url: /myblogone/timeline/
+              - generic [ref=e881]: "43"
+              - generic [ref=e882]: 时间轴
+          - generic [ref=e883]:
+            - link "BiliBili" [ref=e884] [cursor=pointer]:
+              - /url: https://example.com
+              - img [ref=e885]
+              - text: BiliBili
+            - link "QQ" [ref=e888] [cursor=pointer]:
+              - /url: https://example.com
+              - img [ref=e889]
+              - text: QQ
+            - link "Zhihu" [ref=e892] [cursor=pointer]:
+              - /url: https://example.com
+              - img [ref=e893]
+              - text: Zhihu
+            - link "MrHope" [ref=e896] [cursor=pointer]:
+              - /url: https://mrhope.site
+              - img [ref=e897]
+              - text: MrHope
+        - generic [ref=e909]:
+          - generic [ref=e910]:
+            - button "文章" [ref=e911] [cursor=pointer]:
+              - generic "文章" [ref=e912]:
+                - img "article icon" [ref=e913]
+                - text: 文章
+            - button "分类" [ref=e915] [cursor=pointer]:
+              - generic "分类" [ref=e916]:
+                - img "category icon" [ref=e917]
+                - text: 分类
+            - button "标签" [ref=e919] [cursor=pointer]:
+              - generic "标签" [ref=e920]:
+                - img "tag icon" [ref=e921]
+                - text: 标签
+            - button "时间轴" [ref=e923] [cursor=pointer]:
+              - generic "时间轴" [ref=e924]:
+                - img "timeline icon" [ref=e925]
+                - text: 时间轴
+          - generic [ref=e927]:
+            - generic [ref=e928] [cursor=pointer]:
+              - img "article icon" [ref=e929]
+              - text: 57文章
+            - separator [ref=e931]
+            - list
+    - contentinfo [ref=e932]:
+      - generic [ref=e933]: 默认页脚
+      - generic [ref=e934]: Copyright © 2023 杨景

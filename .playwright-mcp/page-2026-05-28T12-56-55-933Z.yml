@@ -1,0 +1,59 @@
+- generic [ref=e2]:
+  - link "跳至主要內容" [ref=e168] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e169]:
+    - banner [ref=e170]:
+      - link [ref=e172] [cursor=pointer]:
+        - /url: /myblogone/
+      - navigation [ref=e174]:
+        - link "My Blog" [ref=e176] [cursor=pointer]:
+          - /url: /myblogone/
+          - generic [ref=e177]: 
+          - text: My Blog
+        - link "脚本" [ref=e179] [cursor=pointer]:
+          - /url: /myblogone/posts/%E4%B8%AA%E4%BA%BA%E8%84%9A%E6%9C%AC/%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E7%BB%8F%E7%BA%AC%E5%BA%A6.html
+          - generic [ref=e180]: 
+          - text: 脚本
+        - link "Java" [ref=e182] [cursor=pointer]:
+          - /url: /myblogone/posts/Java/JVM/1.html
+          - generic [ref=e183]: 
+          - text: Java
+        - link "读书笔记" [ref=e185] [cursor=pointer]:
+          - /url: /myblogone/posts/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%A6%E9%80%8FSpring/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9ASpring%20Framework%E4%B8%AD%E7%9A%84IoC%E5%AE%B9%E5%99%A8.html
+          - generic [ref=e186]: 
+          - text: 读书笔记
+        - link "AI Agent" [ref=e188] [cursor=pointer]:
+          - /url: /myblogone/posts/ai-agent/
+          - generic [ref=e189]: 
+          - text: AI Agent
+        - link "分类" [ref=e191] [cursor=pointer]:
+          - /url: /myblogone/category
+          - generic [ref=e192]: 
+          - text: 分类
+        - link "Bilibili" [ref=e194] [cursor=pointer]:
+          - /url: https://www.bilibili.com/
+          - generic [ref=e195]: 
+          - text: Bilibili
+          - generic [ref=e196]:
+            - img [ref=e197]
+            - generic [ref=e200]: open in new window
+      - generic [ref=e201]:
+        - button [ref=e203] [cursor=pointer]:
+          - img [ref=e204]
+        - search "搜索" [ref=e206] [cursor=pointer]:
+          - img "search icon" [ref=e207]
+          - generic [ref=e209]: 搜索
+          - generic [ref=e210]:
+            - generic [ref=e211]: Ctrl
+            - generic [ref=e212]: K
+    - main [ref=e213]:
+      - generic [ref=e214]:
+        - paragraph [ref=e215]: "404"
+        - heading "页面不存在" [level=1] [ref=e216]
+        - paragraph [ref=e217]: 看起来你访问了一个失效的链接
+      - generic [ref=e218]:
+        - button "返回上一页" [ref=e219]
+        - button "带我回家" [ref=e220]
+    - contentinfo [ref=e221]:
+      - generic [ref=e222]: 默认页脚
+      - generic [ref=e223]: Copyright © 2026 杨景

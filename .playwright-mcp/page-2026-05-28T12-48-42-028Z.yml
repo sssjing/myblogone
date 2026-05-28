@@ -1,0 +1,522 @@
+- generic [ref=e2]:
+  - link "跳至主要內容" [ref=e946] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e947]:
+    - banner [ref=e948]:
+      - link [ref=e950] [cursor=pointer]:
+        - /url: /myblogone/
+      - navigation [ref=e952]:
+        - link "My Blog" [ref=e954] [cursor=pointer]:
+          - /url: /myblogone/
+          - generic [ref=e955]: 
+          - text: My Blog
+        - link "脚本" [ref=e957] [cursor=pointer]:
+          - /url: /myblogone/posts/%E4%B8%AA%E4%BA%BA%E8%84%9A%E6%9C%AC/%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E7%BB%8F%E7%BA%AC%E5%BA%A6.html
+          - generic [ref=e958]: 
+          - text: 脚本
+        - link "Java" [ref=e960] [cursor=pointer]:
+          - /url: /myblogone/posts/Java/JVM/1.html
+          - generic [ref=e961]: 
+          - text: Java
+        - link "读书笔记" [ref=e963] [cursor=pointer]:
+          - /url: /myblogone/posts/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%A6%E9%80%8FSpring/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9ASpring%20Framework%E4%B8%AD%E7%9A%84IoC%E5%AE%B9%E5%99%A8.html
+          - generic [ref=e964]: 
+          - text: 读书笔记
+        - generic "AI Agent" [ref=e966] [cursor=pointer]:
+          - generic [ref=e967]: 
+          - text: AI Agent
+        - link "分类" [ref=e969] [cursor=pointer]:
+          - /url: /myblogone/category
+          - generic [ref=e970]: 
+          - text: 分类
+        - link "Bilibili" [ref=e972] [cursor=pointer]:
+          - /url: https://www.bilibili.com/
+          - generic [ref=e973]: 
+          - text: Bilibili
+          - generic [ref=e974]:
+            - img [ref=e975]
+            - generic [ref=e978]: open in new window
+      - generic [ref=e979]:
+        - button [ref=e981] [cursor=pointer]:
+          - img [ref=e982]
+        - search "搜索" [ref=e984] [cursor=pointer]:
+          - img "search icon" [ref=e985]
+          - generic [ref=e987]: 搜索
+          - generic [ref=e988]:
+            - generic [ref=e989]: Ctrl
+            - generic [ref=e990]: K
+    - complementary [ref=e991]:
+      - list [ref=e992]:
+        - listitem [ref=e993]:
+          - link "My Blog" [ref=e994] [cursor=pointer]:
+            - /url: /myblogone/
+            - generic [ref=e995]: 
+            - text: My Blog
+        - listitem [ref=e996]:
+          - generic [ref=e997]:
+            - button " 目录" [ref=e998] [cursor=pointer]:
+              - generic [ref=e999]: 
+              - generic [ref=e1000]: 目录
+            - list [ref=e1002]:
+              - listitem [ref=e1003]:
+                - generic [ref=e1004]:
+                  - button "读书笔记" [ref=e1005] [cursor=pointer]:
+                    - generic [ref=e1006]: 读书笔记
+                  - list [ref=e1008]:
+                    - listitem [ref=e1009]:
+                      - button "网络是怎样连接的" [ref=e1011] [cursor=pointer]:
+                        - generic [ref=e1012]: 网络是怎样连接的
+                    - listitem [ref=e1014]:
+                      - generic [ref=e1015]:
+                        - button "学透 Spring" [ref=e1016] [cursor=pointer]:
+                          - generic [ref=e1017]: 学透 Spring
+                        - list [ref=e1019]:
+                          - listitem [ref=e1020]:
+                            - link "第二章：Spring Framework中的IoC容器" [ref=e1021] [cursor=pointer]:
+                              - /url: /myblogone/posts/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%A6%E9%80%8FSpring/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9ASpring%20Framework%E4%B8%AD%E7%9A%84IoC%E5%AE%B9%E5%99%A8.html
+                              - generic [ref=e1022]: 
+                              - text: 第二章：Spring Framework中的IoC容器
+                          - listitem [ref=e1023]:
+                            - link "第三章：Spring Framework中的AOP" [ref=e1024] [cursor=pointer]:
+                              - /url: /myblogone/posts/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%A6%E9%80%8FSpring/%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9ASpring%20Framework%E4%B8%AD%E7%9A%84AOP.html
+                              - generic [ref=e1025]: 
+                              - text: 第三章：Spring Framework中的AOP
+                    - listitem [ref=e1026]:
+                      - button "Mysql" [ref=e1028] [cursor=pointer]:
+                        - generic [ref=e1029]: Mysql
+              - listitem [ref=e1031]:
+                - button "个人脚本" [ref=e1033] [cursor=pointer]:
+                  - generic [ref=e1034]: 个人脚本
+              - listitem [ref=e1036]:
+                - button "剑指offer" [ref=e1038] [cursor=pointer]:
+                  - generic [ref=e1039]: 剑指offer
+              - listitem [ref=e1041]:
+                - button "面试题" [ref=e1043] [cursor=pointer]:
+                  - generic [ref=e1044]: 面试题
+              - listitem [ref=e1046]:
+                - button "深入理解计算机系统" [ref=e1048] [cursor=pointer]:
+                  - generic [ref=e1049]: 深入理解计算机系统
+              - listitem [ref=e1051]:
+                - button "算法" [ref=e1053] [cursor=pointer]:
+                  - generic [ref=e1054]: 算法
+              - listitem [ref=e1056]:
+                - button "算法基础" [ref=e1058] [cursor=pointer]:
+                  - generic [ref=e1059]: 算法基础
+              - listitem [ref=e1061]:
+                - button "C++" [ref=e1063] [cursor=pointer]:
+                  - generic [ref=e1064]: C++
+              - listitem [ref=e1066]:
+                - button "Java" [ref=e1068] [cursor=pointer]:
+                  - generic [ref=e1069]: Java
+              - listitem [ref=e1071]:
+                - button "Linux" [ref=e1073] [cursor=pointer]:
+                  - generic [ref=e1074]: Linux
+              - listitem [ref=e1076]:
+                - button "Markdown" [ref=e1078] [cursor=pointer]:
+                  - generic [ref=e1079]: Markdown
+              - listitem [ref=e1081]:
+                - button "Rust" [ref=e1083] [cursor=pointer]:
+                  - generic [ref=e1084]: Rust
+        - listitem [ref=e1086]:
+          - button " java" [ref=e1088] [cursor=pointer]:
+            - generic [ref=e1089]: 
+            - generic [ref=e1090]: java
+        - listitem [ref=e1092]:
+          - link "介绍网址" [ref=e1093] [cursor=pointer]:
+            - /url: /myblogone/intro.html
+            - generic [ref=e1094]: 
+            - text: 介绍网址
+        - listitem [ref=e1095]:
+          - link "Slide page" [ref=e1096] [cursor=pointer]:
+            - /url: /myblogone/slides.html
+            - generic [ref=e1097]: 
+            - text: Slide page
+    - main [ref=e1098]:
+      - navigation [ref=e1099]:
+        - list [ref=e1100]:
+          - listitem [ref=e1101]:
+            - link " My Blog" [ref=e1102] [cursor=pointer]:
+              - /url: /myblogone/
+              - generic [ref=e1103]: 
+              - text: My Blog
+          - listitem [ref=e1104]:
+            - text: /
+            - link "Posts" [ref=e1105] [cursor=pointer]:
+              - /url: /myblogone/posts/
+          - listitem [ref=e1106]:
+            - text: /
+            - link "读书笔记" [ref=e1107] [cursor=pointer]:
+              - /url: /myblogone/posts/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/
+          - listitem [ref=e1108]:
+            - text: /
+            - link "学透 Spring" [ref=e1109] [cursor=pointer]:
+              - /url: /myblogone/posts/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%A6%E9%80%8FSpring/
+          - listitem [ref=e1110]:
+            - text: /
+            - link " 第二章：Spring Framework中的IoC容器":
+              - /url: /myblogone/posts/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%A6%E9%80%8FSpring/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9ASpring%20Framework%E4%B8%AD%E7%9A%84IoC%E5%AE%B9%E5%99%A8.html
+              - generic: 
+              - text: 第二章：Spring Framework中的IoC容器
+      - generic [ref=e1111]:
+        - heading " 第二章：Spring Framework中的IoC容器" [level=1] [ref=e1112]:
+          - generic [ref=e1113]: 
+          - text: 第二章：Spring Framework中的IoC容器
+        - generic [ref=e1114]:
+          - generic "作者🖊" [ref=e1115] [cursor=pointer]:
+            - img "author icon" [ref=e1116]
+            - link "杨景" [ref=e1119]:
+              - /url: https://github.com/sssjing/myblogone
+            - text: 作者🖊
+          - generic "写作日期📅" [ref=e1120] [cursor=pointer]:
+            - img "calendar icon" [ref=e1121]
+            - generic [ref=e1123]: 2023年5月8日
+            - text: 写作日期📅
+          - generic "阅读时间⌛" [ref=e1124] [cursor=pointer]:
+            - img "timer icon" [ref=e1125]
+            - generic [ref=e1127]: 大约 5 分钟
+            - text: 阅读时间⌛
+          - generic "分类🌈" [ref=e1128] [cursor=pointer]:
+            - img "category icon" [ref=e1129]
+            - navigation [ref=e1131]: 读书笔记
+            - navigation [ref=e1132]: Java
+            - navigation [ref=e1133]: Spring
+            - navigation [ref=e1134]: 学透Spring
+            - text: 分类🌈
+        - separator [ref=e1135]
+      - complementary [ref=e1136]:
+        - generic [ref=e1137]:
+          - text: 此页内容
+          - button "print icon" [ref=e1138] [cursor=pointer]:
+            - img "print icon" [ref=e1139]
+        - list [ref=e1142]:
+          - listitem [ref=e1143]:
+            - link "2.1 IoC容器基础知识" [ref=e1144] [cursor=pointer]:
+              - /url: /myblogone/posts/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%A6%E9%80%8FSpring/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9ASpring%20Framework%E4%B8%AD%E7%9A%84IoC%E5%AE%B9%E5%99%A8.html#_2-1-ioc容器基础知识
+          - listitem [ref=e1145]:
+            - list [ref=e1146]:
+              - listitem [ref=e1147]:
+                - link "什么是IoC容器" [ref=e1148] [cursor=pointer]:
+                  - /url: /myblogone/posts/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%A6%E9%80%8FSpring/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9ASpring%20Framework%E4%B8%AD%E7%9A%84IoC%E5%AE%B9%E5%99%A8.html#什么是ioc容器
+              - listitem [ref=e1149]:
+                - link "容器的初始化" [ref=e1150] [cursor=pointer]:
+                  - /url: /myblogone/posts/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%A6%E9%80%8FSpring/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9ASpring%20Framework%E4%B8%AD%E7%9A%84IoC%E5%AE%B9%E5%99%A8.html#容器的初始化
+              - listitem [ref=e1151]:
+                - link "BeanFactory与ApplicationContext" [ref=e1152] [cursor=pointer]:
+                  - /url: /myblogone/posts/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%A6%E9%80%8FSpring/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9ASpring%20Framework%E4%B8%AD%E7%9A%84IoC%E5%AE%B9%E5%99%A8.html#beanfactory与applicationcontext
+              - listitem [ref=e1153]:
+                - link "容器的继承关系" [ref=e1154] [cursor=pointer]:
+                  - /url: /myblogone/posts/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%A6%E9%80%8FSpring/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9ASpring%20Framework%E4%B8%AD%E7%9A%84IoC%E5%AE%B9%E5%99%A8.html#容器的继承关系
+          - listitem [ref=e1155]:
+            - link "2.2 Bean基础知识" [ref=e1156] [cursor=pointer]:
+              - /url: /myblogone/posts/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%A6%E9%80%8FSpring/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9ASpring%20Framework%E4%B8%AD%E7%9A%84IoC%E5%AE%B9%E5%99%A8.html#_2-2-bean基础知识
+          - listitem [ref=e1157]:
+            - list [ref=e1158]:
+              - listitem [ref=e1159]:
+                - link "什么是Bean" [ref=e1160] [cursor=pointer]:
+                  - /url: /myblogone/posts/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%A6%E9%80%8FSpring/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9ASpring%20Framework%E4%B8%AD%E7%9A%84IoC%E5%AE%B9%E5%99%A8.html#什么是bean
+              - listitem [ref=e1161]:
+                - link "Bean的依赖关系" [ref=e1162] [cursor=pointer]:
+                  - /url: /myblogone/posts/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%A6%E9%80%8FSpring/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9ASpring%20Framework%E4%B8%AD%E7%9A%84IoC%E5%AE%B9%E5%99%A8.html#bean的依赖关系
+              - listitem [ref=e1163]:
+                - link "Bean的三种配置方式" [ref=e1164] [cursor=pointer]:
+                  - /url: /myblogone/posts/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%A6%E9%80%8FSpring/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9ASpring%20Framework%E4%B8%AD%E7%9A%84IoC%E5%AE%B9%E5%99%A8.html#bean的三种配置方式
+          - listitem [ref=e1165]:
+            - link "2.3 定制容器与Bean的行为" [ref=e1166] [cursor=pointer]:
+              - /url: /myblogone/posts/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%A6%E9%80%8FSpring/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9ASpring%20Framework%E4%B8%AD%E7%9A%84IoC%E5%AE%B9%E5%99%A8.html#_2-3-定制容器与bean的行为
+          - listitem [ref=e1167]:
+            - link "2.4 容器中的几种抽象" [ref=e1168] [cursor=pointer]:
+              - /url: /myblogone/posts/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%A6%E9%80%8FSpring/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9ASpring%20Framework%E4%B8%AD%E7%9A%84IoC%E5%AE%B9%E5%99%A8.html#_2-4-容器中的几种抽象
+      - generic [ref=e1170]:
+        - heading "2.1 IoC容器基础知识" [level=2] [ref=e1171]:
+          - link [ref=e1172] [cursor=pointer]:
+            - /url: "#_2-1-ioc容器基础知识"
+            - text: "#"
+          - text: 2.1 IoC容器基础知识
+        - heading "什么是IoC容器" [level=3] [ref=e1173]:
+          - link [ref=e1174] [cursor=pointer]:
+            - /url: "#什么是ioc容器"
+            - text: "#"
+          - text: 什么是IoC容器
+        - paragraph [ref=e1175]: 控制反转（Inversion of Control，IoC）
+        - paragraph [ref=e1176]:
+          - mark [ref=e1177]: 控制反转
+          - text: 是一种决定容器如何装配组件的模式，
+          - mark [ref=e1178]: 容器
+          - text: 就是创建组件并对他们进行管理的地方，它牵扯到组件该如何定义、组件该何时创建、又该何时销毁、它们互相之间是什么关系等。这些本应该在组件内部管理的东西，被从组件中剥离出来。
+        - paragraph [ref=e1179]: 所有组件都要被动接受容器的控制
+        - paragraph [ref=e1180]:
+          - mark [ref=e1181]: 依赖注入
+          - text: （Dependency Injection）可以更好的对控制反转进行描述
+        - paragraph [ref=e1182]: Spring容器就是Spring Framework中的IoC容器
+        - paragraph [ref=e1183]: 将业务对象（也就是组件，在Spring中这些组件被称为Bean）和关于组件的配置元数据（比如依赖关系）输入Spring容器中，容器就可以组装一个可用的系统。
+        - heading "容器的初始化" [level=3] [ref=e1184]:
+          - link [ref=e1185] [cursor=pointer]:
+            - /url: "#容器的初始化"
+            - text: "#"
+          - text: 容器的初始化
+        - paragraph [ref=e1186]:
+          - text: Spring容器的配置需要
+          - strong [ref=e1187]: 元数据
+          - text: 和
+          - strong [ref=e1188]: 业务对象
+        - paragraph [ref=e1189]: 配置元数据的方式：
+        - list [ref=e1190]:
+          - listitem [ref=e1191]: 从XML配置文件配置（早期）
+          - listitem [ref=e1192]: 通过注解
+          - listitem [ref=e1193]: 通过java类
+        - paragraph [ref=e1194]: 容器初始化的大致步骤：
+        - list [ref=e1195]:
+          - listitem [ref=e1196]: 从XML文件、Java类或其他地方配置元数据。
+          - listitem [ref=e1197]: 通过BeanFactoryPostProcessor对配置元数据进行一轮处理。
+          - listitem [ref=e1198]: 初始化Bean实例，并根据给定的依赖关系组装对象。
+          - listitem [ref=e1199]: 通过BeanPostProcessor对Bean进行处理，期间还会触发Bean被构造后的回调方法。
+        - paragraph [ref=e1200]:
+          - text: 比如下列代码所示的
+          - strong [ref=e1201]: 业务对象
+          - text: ，它会返回一个字符串，可以看到他就是一个最普通的java类
+        - generic [ref=e1202]:
+          - text: java
+          - button "复制代码" [ref=e1203] [cursor=pointer]
+          - code [ref=e1206]:
+            - text: package
+            - generic [ref=e1207]: com.zyf
+            - text: "; public class Hello { public String hello(){ return \"Hello\"; } }"
+        - paragraph [ref=e1216]: 在没有IoC容器时，就需要像下列代码一样 管理自己的生命周期
+        - generic [ref=e1217]:
+          - text: java
+          - button "复制代码" [ref=e1218] [cursor=pointer]
+          - code [ref=e1221]: "public class Application { public static void main(String[] args) { Hello hello = new Hello(); System.out.println(hello.hello()); } }"
+        - paragraph [ref=e1229]: 如果把实例交给Spring交给容器托管，可以将它配置到XML文件中（main/resources/beans.xml）
+        - generic [ref=e1230]:
+          - paragraph [ref=e1231]: 错误
+          - paragraph [ref=e1232]: 编写XML配置文件时出现了错误：
+          - paragraph [ref=e1233]: URI is not registered (Settings | Languages & Frameworks | Schemas and DTDs)
+          - paragraph [ref=e1234]:
+            - text: 参考解决方法：
+            - link "https://blog.csdn.net/weixin_43367967/article/details/85198352 open in new window" [ref=e1235] [cursor=pointer]:
+              - /url: https://blog.csdn.net/weixin_43367967/article/details/85198352
+              - text: https://blog.csdn.net/weixin_43367967/article/details/85198352
+              - generic [ref=e1236]:
+                - img [ref=e1237]
+                - generic [ref=e1240]: open in new window
+        - generic [ref=e1241]:
+          - text: xml
+          - button "复制代码" [ref=e1242] [cursor=pointer]
+          - code [ref=e1245]:
+            - text: <?xml version="1.0" encoding="UTF-8"?>
+            - generic [ref=e1246]:
+              - generic [ref=e1247]: <beans
+              - text: xmlns
+              - generic [ref=e1248]: ="http://www.springframework.org/schema/beans"
+              - generic [ref=e1249]: xmlns:xsi
+              - generic [ref=e1250]: ="http://www.w3.org/2001/XMLSchema-instance"
+              - generic [ref=e1251]: xsi:schemaLocation
+              - generic [ref=e1252]: ="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd"
+              - text: ">"
+            - text: <!-- 1.创建对象，就是在xml中写一个bean标签，就是一个对象 -->
+            - generic [ref=e1253]:
+              - generic [ref=e1254]: <bean
+              - text: id
+              - generic [ref=e1255]: ="hello"
+              - text: class
+              - generic [ref=e1256]: ="com.zyf.Hello"
+              - text: />
+            - generic [ref=e1257]:
+              - generic [ref=e1258]: </beans
+              - text: ">"
+        - paragraph [ref=e1270]:
+          - text: 如下面代码所示，将配置文件载入容器
+          - code [ref=e1271]: BeanFactory
+          - text: 只是一个最基础的接口，我们需要选择一个合适的实现类
+          - strong [ref=e1272]:
+            - text: 在实际工作中会用到
+            - code [ref=e1273]: ApplicationContext
+            - text: 的各种实现
+        - paragraph [ref=e1274]:
+          - text: 此处使用
+          - code [ref=e1275]: DefaultListableBeanFactory
+          - text: 这个实现类他不关心配置的方式，
+          - code [ref=e1276]: XmlBeanDefinitionReader
+          - text: 可以读取XML文件中的元数据，通过它加载CLASSPATH中的beans.xml文件（这个xml配置文件名称可以自己起）
+        - generic [ref=e1277]:
+          - text: java
+          - button "复制代码" [ref=e1278] [cursor=pointer]
+          - code [ref=e1281]:
+            - text: package
+            - generic [ref=e1282]: com.zyf
+            - text: ; import
+            - generic [ref=e1283]:
+              - generic [ref=e1284]: org.springframework.beans.factory.
+              - text: BeanFactory
+            - text: ; import
+            - generic [ref=e1285]:
+              - generic [ref=e1286]: org.springframework.beans.factory.support.
+              - text: DefaultListableBeanFactory
+            - text: ; import
+            - generic [ref=e1287]:
+              - generic [ref=e1288]: org.springframework.beans.factory.xml.
+              - text: XmlBeanDefinitionReader
+            - text: "; public class Application { private BeanFactory beanFactory; public Application() { beanFactory = new DefaultListableBeanFactory(); XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader((DefaultListableBeanFactory) beanFactory); reader.loadBeanDefinitions(\"beans.xml\"); } public void sayHello() { // Hello hello = (Hello)beanFactory.getBean(\"hello\"); Hello hello = beanFactory.getBean(\"Hello\", Hello.class); System.out.println(hello.hello()); } }"
+        - generic [ref=e1312]:
+          - text: java
+          - button "复制代码" [ref=e1313] [cursor=pointer]
+          - code [ref=e1316]:
+            - text: package
+            - generic [ref=e1317]: com.zyf
+            - text: "; public class Main { public static void main(String[] args) { Application application = new Application(); application.sayHello(); } }"
+        - heading "BeanFactory与ApplicationContext" [level=3] [ref=e1327]:
+          - link [ref=e1328] [cursor=pointer]:
+            - /url: "#beanfactory与applicationcontext"
+            - text: "#"
+          - text: BeanFactory与ApplicationContext
+        - paragraph [ref=e1329]: spring-context模块在spring-core和spring-beans的基础上提供了更丰富的功能，例如事件传播、资源加载、国际化支持等。
+        - paragraph [ref=e1330]: BeanFactory是容器的基础接口，ApplicationContext接口继承了BeanFactory
+        - paragraph [ref=e1331]: 将上面代码使用的BeanFactory修改为ApplicationContext
+        - generic [ref=e1332]:
+          - text: java
+          - button "复制代码" [ref=e1333] [cursor=pointer]
+          - code [ref=e1336]:
+            - text: package
+            - generic [ref=e1337]: com.zyf
+            - text: ; import
+            - generic [ref=e1338]:
+              - generic [ref=e1339]: org.springframework.context.
+              - text: ApplicationContext
+            - text: ; import
+            - generic [ref=e1340]:
+              - generic [ref=e1341]: org.springframework.context.support.
+              - text: ClassPathXmlApplicationContext
+            - text: "; public class Application { private ApplicationContext applicationContext; public Application() { applicationContext = new ClassPathXmlApplicationContext(\"beans.xml\"); } public void sayHello() { Hello hello = (Hello)applicationContext.getBean(\"hello\"); //Hello hello = applicationContext.getBean(\"hello\", Hello.class); System.out.println(hello.hello()); } }"
+        - paragraph [ref=e1362]: 常见的ApplicationContext实现类
+        - table [ref=e1363]:
+          - rowgroup [ref=e1364]:
+            - row "类名 说明" [ref=e1365]:
+              - columnheader "类名" [ref=e1366]
+              - columnheader "说明" [ref=e1367]
+          - rowgroup [ref=e1368]:
+            - row "ClassPathXmlApplication 从CLASSPATH中加载XML文件来配置ApplicationContext" [ref=e1369]:
+              - cell "ClassPathXmlApplication" [ref=e1370]
+              - cell "从CLASSPATH中加载XML文件来配置ApplicationContext" [ref=e1371]
+            - row "FileSystemXmlApplication 从文件系统中加载XML文件来配置ApplicationContext" [ref=e1372]:
+              - cell "FileSystemXmlApplication" [ref=e1373]
+              - cell "从文件系统中加载XML文件来配置ApplicationContext" [ref=e1374]
+            - row "AnnotationConfigApplication 根据注解和Java类来配置ApplicationContext" [ref=e1375]:
+              - cell "AnnotationConfigApplication" [ref=e1376]
+              - cell "根据注解和Java类来配置ApplicationContext" [ref=e1377]
+        - heading "容器的继承关系" [level=3] [ref=e1378]:
+          - link [ref=e1379] [cursor=pointer]:
+            - /url: "#容器的继承关系"
+            - text: "#"
+          - text: 容器的继承关系
+        - paragraph [ref=e1380]: 子容器可以继承父容器中的配置组件
+        - heading "2.2 Bean基础知识" [level=2] [ref=e1381]:
+          - link [ref=e1382] [cursor=pointer]:
+            - /url: "#_2-2-bean基础知识"
+            - text: "#"
+          - text: 2.2 Bean基础知识
+        - heading "什么是Bean" [level=3] [ref=e1383]:
+          - link [ref=e1384] [cursor=pointer]:
+            - /url: "#什么是bean"
+            - text: "#"
+          - text: 什么是Bean
+        - paragraph [ref=e1385]:
+          - text: Bean是Java中
+          - strong [ref=e1386]: 可重用软件组件
+          - text: ，Spring容器也遵循这一惯例，因此将容器中管理的可重用组件称为Bean。
+        - paragraph [ref=e1387]:
+          - text: 容器会根据提供的元数据来创建并管理这些Bean，其中也包括它们之间的依赖关系。 Spring容器对Bean并没有太多要求，无需实现特定接口或依赖特定库，只要是最普通的Java对象即可，这类对象也被称为
+          - strong [ref=e1388]: POJO（Plain Old Java Object）
+        - paragraph [ref=e1389]: 一个Bean的定义中，会包含如下部分：
+        - list [ref=e1390]:
+          - listitem [ref=e1391]: Bean的名称，一般是Bean的id，也可以为Bean指定别名（alias）
+          - listitem [ref=e1392]: Bean的具体类信息，这是一个全限定类名
+          - listitem [ref=e1393]: Bean的作用域，单例（singleton）还是原型（prototype）
+          - listitem [ref=e1394]: 依赖注入相关信息，构造方法参数，属性以及自动织入（autowire）方式
+          - listitem [ref=e1395]: 创建销毁相关信息，懒加载模式、初始化回调方法与销毁回调方法
+        - paragraph [ref=e1396]: 我们可以自行设置Bean的名称，也可以让Spring容器帮我们设置名称。Spring容器的命名方式为类名的首字母小写，搭配驼峰（camel-cased）规则。比如类型为HelloService的bean，自动生成的名称就为helloService
+        - heading "Bean的依赖关系" [level=3] [ref=e1397]:
+          - link [ref=e1398] [cursor=pointer]:
+            - /url: "#bean的依赖关系"
+            - text: "#"
+          - text: Bean的依赖关系
+        - heading "Bean的三种配置方式" [level=3] [ref=e1399]:
+          - link [ref=e1400] [cursor=pointer]:
+            - /url: "#bean的三种配置方式"
+            - text: "#"
+          - text: Bean的三种配置方式
+        - paragraph [ref=e1401]:
+          - text: Spring容器的元数据
+          - strong [ref=e1402]: 本质上就是配置Bean
+        - heading "1.基于XML文件配置" [level=4] [ref=e1403]:
+          - link [ref=e1404] [cursor=pointer]:
+            - /url: "#_1-基于xml文件配置"
+            - text: "#"
+          - text: 1.基于XML文件配置
+        - heading "2.基于注解的配置" [level=4] [ref=e1405]:
+          - link [ref=e1406] [cursor=pointer]:
+            - /url: "#_2-基于注解的配置"
+            - text: "#"
+          - text: 2.基于注解的配置
+        - paragraph [ref=e1407]: 在beans.xml加入以下代码
+        - generic [ref=e1408]:
+          - text: xml
+          - button "复制代码" [ref=e1409] [cursor=pointer]
+          - code [ref=e1412]:
+            - generic [ref=e1413]:
+              - generic [ref=e1414]: <context:component-scan
+              - text: base-package
+              - generic [ref=e1415]: ="com.zyf"
+              - text: ">"
+        - paragraph [ref=e1418]: 上述配置会扫描com.zyf包内的类，在类上添加以下四个注解都能让Spring容器把他们配置为Bean
+        - table [ref=e1419]:
+          - rowgroup [ref=e1420]:
+            - row "注解 说明" [ref=e1421]:
+              - columnheader "注解" [ref=e1422]
+              - columnheader "说明" [ref=e1423]
+          - rowgroup [ref=e1424]:
+            - row "@Component 将类标识为普通组件，即一个Bean" [ref=e1425]:
+              - cell "@Component" [ref=e1426]
+              - cell "将类标识为普通组件，即一个Bean" [ref=e1427]
+            - row "@Service 将类标识为服务层的服务" [ref=e1428]:
+              - cell "@Service" [ref=e1429]
+              - cell "将类标识为服务层的服务" [ref=e1430]
+            - row "@Reposity 姜磊表示为数据层的数据仓库，一般是DAO（data Access Object）" [ref=e1431]:
+              - cell "@Reposity" [ref=e1432]
+              - cell "姜磊表示为数据层的数据仓库，一般是DAO（data Access Object）" [ref=e1433]
+            - row "@Controller 将类标识为Web层的Web控制器（后来针对REST服务又增加了@RestController）" [ref=e1434]:
+              - cell "@Controller" [ref=e1435]
+              - cell "将类标识为Web层的Web控制器（后来针对REST服务又增加了@RestController）" [ref=e1436]
+        - paragraph [ref=e1437]: 如果不指定名称Spring会自动生成一个名称，也可以指定
+        - generic [ref=e1438]:
+          - text: java
+          - button "复制代码" [ref=e1439] [cursor=pointer]
+          - code [ref=e1442]: "@Component(\"helloBean\") public class Hello {...}"
+        - heading "3.基于Java类的配置" [level=4] [ref=e1446]:
+          - link [ref=e1447] [cursor=pointer]:
+            - /url: "#_3-基于java类的配置"
+            - text: "#"
+          - text: 3.基于Java类的配置
+        - paragraph [ref=e1448]: 可以用Java类代替XML文件，使用@Configuration、@Bean、@ComponentScan等
+        - heading "2.3 定制容器与Bean的行为" [level=2] [ref=e1449]:
+          - link [ref=e1450] [cursor=pointer]:
+            - /url: "#_2-3-定制容器与bean的行为"
+            - text: "#"
+          - text: 2.3 定制容器与Bean的行为
+        - heading "2.4 容器中的几种抽象" [level=2] [ref=e1451]:
+          - link [ref=e1452] [cursor=pointer]:
+            - /url: "#_2-4-容器中的几种抽象"
+            - text: "#"
+          - text: 2.4 容器中的几种抽象
+      - generic [ref=e1454]:
+        - generic [ref=e1455]: "上次编辑于: 2023/5/22 11:59:03"
+        - generic [ref=e1456]: "贡献者: zyf"
+      - navigation [ref=e1457]:
+        - link "第三章：Spring Framework中的AOP" [ref=e1458] [cursor=pointer]:
+          - /url: /myblogone/posts/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%A6%E9%80%8FSpring/%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BC%9ASpring%20Framework%E4%B8%AD%E7%9A%84AOP.html
+          - generic [ref=e1459]: 下一页
+          - generic [ref=e1461]:
+            - text: 第三章：Spring Framework中的AOP
+            - generic [ref=e1462]: 
+    - contentinfo [ref=e1463]:
+      - generic [ref=e1464]: 默认页脚
+      - generic [ref=e1465]: Copyright © 2026 杨景

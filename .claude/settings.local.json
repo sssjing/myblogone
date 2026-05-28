@@ -7,7 +7,29 @@
       "WebFetch(domain:lilianweng.github.io)",
       "WebFetch(domain:www.promptingguide.ai)",
       "WebFetch(domain:www.deeplearning.ai)",
-      "WebFetch(domain:www.anthropic.com)"
+      "WebFetch(domain:www.anthropic.com)",
+      "Bash(gh api:*)",
+      "WebFetch(domain:sssjing.github.io)",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_take_screenshot",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://api.github.com/repos/sssjing/myblogone/pages\")",
+      "Bash(curl -s \"https://sssjing.github.io/myblogone/\")",
+      "Bash(curl:*)",
+      "Bash(git pull:*)",
+      "Bash(git fetch:*)",
+      "mcp__playwright__browser_console_messages",
+      "mcp__playwright__browser_snapshot",
+      "Bash(ls -la assets/index.html-*.js)",
+      "Bash(node -e ':*)",
+      "Bash(node inject-articles.js)",
+      "mcp__playwright__browser_close",
+      "Bash(grep -oP '读书笔记\",\"icon\":\"book\",\"link\":\"[^\"]*\"},\\\\{\"text\":\"分类' \"C:\\\\Users\\\\yangjing33\\\\Downloads\\\\myblogone-master\\\\myblogone-master\\\\assets\\\\app-beffe7bc.js\")",
+      "mcp__playwright__browser_click",
+      "mcp__playwright__browser_wait_for",
+      "mcp__playwright__browser_run_code_unsafe"
     ]
   }
 }
