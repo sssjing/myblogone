@@ -19,41 +19,33 @@
     { href: "/myblogone/posts/ai-agent/agent-basics.html", title: "AI Agent 基础概念", excerpt: "什么是 AI Agent？Agent 的核心架构（Planning + Memory + Tool Use）、Agency Level 分级、发展历程与应用场景。", time: "8 分钟" }
   ];
 
+  var aiAgentFixed = false;
+
   function injectNavLink() {
-    // Ensure AI Agent nav link bypasses VuePress SPA routing
+    if (aiAgentFixed) return;
     var navLinks = document.querySelector(".nav-links");
     if (!navLinks) return;
     var aiLink = navLinks.querySelector('a[href*="ai-agent"]');
-    if (aiLink) {
-      // Fix existing link: remove SPA behavior by replacing with force-navigation
-      if (!aiLink.dataset.fixed) {
-        aiLink.dataset.fixed = "1";
-        aiLink.addEventListener("click", function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          e.stopImmediatePropagation();
-          window.location.href = "/myblogone/posts/ai-agent/";
-        }, true);
-      }
-      return;
-    }
-    // If VuePress didn't render it, create a new nav item
-    var categoryLink = navLinks.querySelector('a[href*="/category"]');
-    if (!categoryLink) return;
-    var categoryItem = categoryLink.closest(".nav-item");
-    if (!categoryItem) return;
-    var navItem = document.createElement("div");
-    navItem.className = "nav-item hide-in-mobile";
-    navItem.innerHTML = '<a href="/myblogone/posts/ai-agent/" class="nav-link" aria-label="AI Agent" data-fixed="1"><span class="font-icon icon iconfont icon-category" style=""></span>AI Agent</a>';
-    // Add force-navigation click handler
-    var link = navItem.querySelector("a");
-    link.addEventListener("click", function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      e.stopImmediatePropagation();
+    if (!aiLink) return;
+    // Replace the entire nav item with a native link that bypasses Vue SPA
+    var navItem = aiLink.closest(".nav-item");
+    if (!navItem || navItem.dataset.fixed === "1") return;
+    navItem.dataset.fixed = "1";
+    aiAgentFixed = true;
+    // Replace innerHTML with a native <a> that has onclick for force-navigation
+    var newLink = document.createElement("a");
+    newLink.href = "/myblogone/posts/ai-agent/";
+    newLink.className = "nav-link";
+    newLink.setAttribute("aria-label", "AI Agent");
+    newLink.innerHTML = '<span class="font-icon icon iconfont icon-category" style=""></span>AI Agent';
+    newLink.onclick = function(e) {
       window.location.href = "/myblogone/posts/ai-agent/";
-    }, true);
-    categoryItem.parentNode.insertBefore(navItem, categoryItem);
+      return false;
+    };
+    newLink.style.cursor = "pointer";
+    // Clear nav item and insert new link
+    navItem.innerHTML = "";
+    navItem.appendChild(newLink);
   }
 
   function inject() {
