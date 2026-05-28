@@ -1,0 +1,261 @@
+- generic [ref=e2]:
+  - link "跳至主要內容" [ref=e3] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - link [ref=e7] [cursor=pointer]:
+        - /url: /myblogone/
+      - navigation [ref=e9]:
+        - link "My Blog" [ref=e11] [cursor=pointer]:
+          - /url: /myblogone/
+          - generic [ref=e12]: 
+          - text: My Blog
+        - link "脚本" [ref=e14] [cursor=pointer]:
+          - /url: /myblogone/posts/%E4%B8%AA%E4%BA%BA%E8%84%9A%E6%9C%AC/%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E7%BB%8F%E7%BA%AC%E5%BA%A6.html
+          - generic [ref=e15]: 
+          - text: 脚本
+        - link "Java" [ref=e17] [cursor=pointer]:
+          - /url: /myblogone/posts/Java/JVM/1.html
+          - generic [ref=e18]: 
+          - text: Java
+        - link "读书笔记" [ref=e20] [cursor=pointer]:
+          - /url: /myblogone/posts/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%AD%A6%E9%80%8FSpring/%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9ASpring%20Framework%E4%B8%AD%E7%9A%84IoC%E5%AE%B9%E5%99%A8.html
+          - generic [ref=e21]: 
+          - text: 读书笔记
+        - generic "AI Agent" [ref=e23] [cursor=pointer]:
+          - generic [ref=e24]: 
+          - text: AI Agent
+        - link "分类" [ref=e26] [cursor=pointer]:
+          - /url: /myblogone/category
+          - generic [ref=e27]: 
+          - text: Bilibili
+          - generic [ref=e28]:
+            - img [ref=e29]
+            - generic [ref=e32]: open in new window
+      - generic [ref=e33]:
+        - button [ref=e35] [cursor=pointer]:
+          - img [ref=e36]
+        - search "搜索" [ref=e38] [cursor=pointer]:
+          - img "search icon" [ref=e39]
+          - generic [ref=e41]: 搜索
+          - generic [ref=e42]:
+            - generic [ref=e43]: Ctrl
+            - generic [ref=e44]: K
+    - complementary [ref=e45]:
+      - list [ref=e46]:
+        - listitem [ref=e47]:
+          - link "My Blog" [ref=e48] [cursor=pointer]:
+            - /url: /myblogone/
+            - generic [ref=e49]: 
+            - text: My Blog
+        - listitem [ref=e50]:
+          - generic [ref=e51]:
+            - button " 目录" [ref=e52] [cursor=pointer]:
+              - generic [ref=e53]: 
+              - generic [ref=e54]: 目录
+            - list [ref=e56]:
+              - listitem [ref=e57]:
+                - button "读书笔记" [ref=e59] [cursor=pointer]:
+                  - generic [ref=e60]: 读书笔记
+              - listitem [ref=e62]:
+                - button "个人脚本" [ref=e64] [cursor=pointer]:
+                  - generic [ref=e65]: 个人脚本
+              - listitem [ref=e67]:
+                - button "剑指offer" [ref=e69] [cursor=pointer]:
+                  - generic [ref=e70]: 剑指offer
+              - listitem [ref=e72]:
+                - button "面试题" [ref=e74] [cursor=pointer]:
+                  - generic [ref=e75]: 面试题
+              - listitem [ref=e77]:
+                - button "深入理解计算机系统" [ref=e79] [cursor=pointer]:
+                  - generic [ref=e80]: 深入理解计算机系统
+              - listitem [ref=e82]:
+                - button "算法" [ref=e84] [cursor=pointer]:
+                  - generic [ref=e85]: 算法
+              - listitem [ref=e87]:
+                - button "算法基础" [ref=e89] [cursor=pointer]:
+                  - generic [ref=e90]: 算法基础
+              - listitem [ref=e92]:
+                - button "C++" [ref=e94] [cursor=pointer]:
+                  - generic [ref=e95]: C++
+              - listitem [ref=e97]:
+                - generic [ref=e98]:
+                  - button "Java" [ref=e99] [cursor=pointer]:
+                    - generic [ref=e100]: Java
+                  - list [ref=e102]:
+                    - listitem [ref=e103]:
+                      - generic [ref=e104]:
+                        - button "J V M" [ref=e105] [cursor=pointer]:
+                          - generic [ref=e106]: J V M
+                        - list [ref=e108]:
+                          - listitem [ref=e109]:
+                            - link "JVM虚拟机" [ref=e110] [cursor=pointer]:
+                              - /url: /myblogone/posts/Java/JVM/1.html
+                              - generic [ref=e111]: 
+                              - text: JVM虚拟机
+                    - listitem [ref=e112]:
+                      - button "Java基础" [ref=e114] [cursor=pointer]:
+                        - generic [ref=e115]: Java基础
+                    - listitem [ref=e117]:
+                      - button "N I O" [ref=e119] [cursor=pointer]:
+                        - generic [ref=e120]: N I O
+                    - listitem [ref=e122]:
+                      - button "Spring Security" [ref=e124] [cursor=pointer]:
+                        - generic [ref=e125]: Spring Security
+              - listitem [ref=e127]:
+                - button "Linux" [ref=e129] [cursor=pointer]:
+                  - generic [ref=e130]: Linux
+              - listitem [ref=e132]:
+                - button "Markdown" [ref=e134] [cursor=pointer]:
+                  - generic [ref=e135]: Markdown
+              - listitem [ref=e137]:
+                - button "Rust" [ref=e139] [cursor=pointer]:
+                  - generic [ref=e140]: Rust
+        - listitem [ref=e142]:
+          - button " java" [ref=e144] [cursor=pointer]:
+            - generic [ref=e145]: 
+            - generic [ref=e146]: java
+        - listitem [ref=e148]:
+          - link "介绍网址" [ref=e149] [cursor=pointer]:
+            - /url: /myblogone/intro.html
+            - generic [ref=e150]: 
+            - text: 介绍网址
+        - listitem [ref=e151]:
+          - link "Slide page" [ref=e152] [cursor=pointer]:
+            - /url: /myblogone/slides.html
+            - generic [ref=e153]: 
+            - text: Slide page
+    - main [ref=e154]:
+      - navigation [ref=e155]:
+        - list [ref=e156]:
+          - listitem [ref=e157]:
+            - link " My Blog" [ref=e158] [cursor=pointer]:
+              - /url: /myblogone/
+              - generic [ref=e159]: 
+              - text: My Blog
+          - listitem [ref=e160]:
+            - text: /
+            - link "Posts" [ref=e161] [cursor=pointer]:
+              - /url: /myblogone/posts/
+          - listitem [ref=e162]:
+            - text: /
+            - link "Java" [ref=e163] [cursor=pointer]:
+              - /url: /myblogone/posts/Java/
+          - listitem [ref=e164]:
+            - text: /
+            - link "J V M" [ref=e165] [cursor=pointer]:
+              - /url: /myblogone/posts/Java/JVM/
+          - listitem [ref=e166]:
+            - text: /
+            - link " JVM虚拟机":
+              - /url: /myblogone/posts/Java/JVM/1.html
+              - generic: 
+              - text: JVM虚拟机
+      - generic [ref=e167]:
+        - heading " JVM虚拟机" [level=1] [ref=e168]:
+          - generic [ref=e169]: 
+          - text: JVM虚拟机
+        - generic [ref=e170]:
+          - generic "作者🖊" [ref=e171] [cursor=pointer]:
+            - img "author icon" [ref=e172]
+            - link "杨景" [ref=e175]:
+              - /url: https://github.com/sssjing/myblogone
+            - text: 作者🖊
+          - generic "写作日期📅" [ref=e176] [cursor=pointer]:
+            - img "calendar icon" [ref=e177]
+            - generic [ref=e179]: 2023年6月11日
+            - text: 写作日期📅
+          - generic "阅读时间⌛" [ref=e180] [cursor=pointer]:
+            - img "timer icon" [ref=e181]
+            - generic [ref=e183]: 大约 2 分钟
+            - text: 阅读时间⌛
+        - separator [ref=e184]
+      - complementary [ref=e185]:
+        - generic [ref=e186]:
+          - text: 此页内容
+          - button "print icon" [ref=e187] [cursor=pointer]:
+            - img "print icon" [ref=e188]
+        - list [ref=e191]:
+          - listitem [ref=e192]:
+            - link "什么是字节码" [ref=e193] [cursor=pointer]:
+              - /url: /myblogone/posts/Java/JVM/1.html#什么是字节码
+          - listitem [ref=e194]:
+            - link "字节码的运行时结构" [ref=e195] [cursor=pointer]:
+              - /url: /myblogone/posts/Java/JVM/1.html#字节码的运行时结构
+      - generic [ref=e197]:
+        - heading "什么是字节码" [level=2] [ref=e198]:
+          - link [ref=e199] [cursor=pointer]:
+            - /url: "#什么是字节码"
+            - text: "#"
+          - text: 什么是字节码
+        - paragraph [ref=e200]: Java bytecode 由单字节（byte）的指令组成，理论上最多支持 256 个操作码（opcode）。实际上 Java 只使用了200左右的操作码， 还有一些操作码则保留给调试操作。根据指令的性质，主要分为四个大类：
+        - list [ref=e201]:
+          - listitem [ref=e202]: 栈操作指令，包括与局部变量交互的指令
+          - listitem [ref=e203]: 程序流程控制指令
+          - listitem [ref=e204]: 对象操作指令，包括方法调用指令
+          - listitem [ref=e205]: 算术运算以及类型转换指令
+        - paragraph [ref=e206]:
+          - code [ref=e207]: javac
+          - text: 编译以下代码
+        - generic [ref=e208]:
+          - text: java
+          - button "复制代码" [ref=e209] [cursor=pointer]
+          - code [ref=e212]:
+            - text: package
+            - generic [ref=e213]: com.zyf.
+            - text: "JVM; public class HelloByteCode { public static void main(String[] args){ HelloByteCode obj = new HelloByteCode(); } }"
+        - paragraph [ref=e223]:
+          - code [ref=e224]: javap -c HelloByteCode
+          - text: 查看字节码文件结构
+        - generic [ref=e225]:
+          - text: java
+          - button "复制代码" [ref=e226] [cursor=pointer]
+          - code [ref=e229]:
+            - text: public class
+            - generic [ref=e230]:
+              - generic [ref=e231]: com.zyf.
+              - text: JVM.HelloByteCode
+            - text: "{ public"
+            - generic [ref=e232]:
+              - generic [ref=e233]: com.zyf.
+              - text: JVM.HelloByteCode
+            - text: "(); Code: 0: aload_0 // 偏移码 aload_0 表示本地变量表的第0个变量加载到栈上 1: invokespecial #1 // Method java/lang/Object.\"<init>\":()V 4: return public static void main("
+            - generic [ref=e234]:
+              - generic [ref=e235]: java.lang.
+              - text: String
+            - text: "[]); Code: 0: new #2 // class com/zyf/JVM/HelloByteCode 3: dup // 压栈 4: invokespecial #3 // Method \"<init>\":()V 构造函数 7: astore_1 // new 出来的对象引用押入到本地变量标号1的位置 8: return }"
+        - paragraph [ref=e252]: jvm按照字节码的顺序执行
+        - paragraph [ref=e253]:
+          - code [ref=e254]: javap -c -verbose查看更多信息
+        - generic [ref=e255]:
+          - text: java
+          - button "复制代码" [ref=e256] [cursor=pointer]
+          - code [ref=e259]:
+            - text: "警告: 二进制文件HelloByteCode包含"
+            - generic [ref=e260]:
+              - generic [ref=e261]: com.zyf.
+              - text: JVM.HelloByteCode
+            - text: Classfile /E:/SpringBoot/test/src/main/java/com/zyf/JVM/HelloByteCode.class Last modified 2023-6-11; size 300 bytes MD5 checksum f9d36c2e9e869d6122200df6c46d6994 Compiled from "HelloByteCode.java" public class
+            - generic [ref=e262]:
+              - generic [ref=e263]: com.zyf.
+              - text: JVM.HelloByteCode
+            - text: "minor version: 0 major version: 52 flags: ACC_PUBLIC, ACC_SUPER Constant pool: #1 = Methodref #4.#13 // java/lang/Object.\"<init>\":()V #2 = Class #14 // com/zyf/JVM/HelloByteCode #3 = Methodref #2.#13 // com/zyf/JVM/HelloByteCode.\"<init>\":()V #4 = Class #15 // java/lang/Object #5 = Utf8"
+            - generic [ref=e264]: <init>
+            - text: "#6 = Utf8 ()V #7 = Utf8 Code #8 = Utf8 LineNumberTable #9 = Utf8 main #10 = Utf8 ([Ljava/lang/String;)V #11 = Utf8 SourceFile #12 = Utf8 HelloByteCode.java #13 = NameAndType #5:#6 // \"<init>\":()V #14 = Utf8 com/zyf/JVM/HelloByteCode #15 = Utf8 java/lang/Object { public"
+            - generic [ref=e265]:
+              - generic [ref=e266]: com.zyf.
+              - text: JVM.HelloByteCode
+            - text: "(); descriptor: ()V flags: ACC_PUBLIC Code: stack=1, locals=1, args_size=1 0: aload_0 1: invokespecial #1 // Method java/lang/Object.\"<init>\":()V 4: return LineNumberTable: line 3: 0 public static void main("
+            - generic [ref=e267]:
+              - generic [ref=e268]: java.lang.
+              - text: String
+            - text: "[]); descriptor: ([Ljava/lang/String;)V flags: ACC_PUBLIC, ACC_STATIC Code: stack=2, locals=2, args_size=1 0: new #2 // class com/zyf/JVM/HelloByteCode 3: dup 4: invokespecial #3 // Method \"<init>\":()V 7: astore_1 8: return LineNumberTable: line 5: 0 line 6: 8 } SourceFile: \"HelloByteCode.java\""
+        - heading "字节码的运行时结构" [level=2] [ref=e322]:
+          - link [ref=e323] [cursor=pointer]:
+            - /url: "#字节码的运行时结构"
+            - text: "#"
+          - text: 字节码的运行时结构
+        - paragraph [ref=e324]: JVM 是一台基于栈的计算机器。 每个线程都有一个独属于自己的线程栈（JVM Stack），用于存储栈帧（Frame）。 每一次方法调用、JVM 都会自动创建一个栈帧。 栈帧由操作数栈、 局部变量数组以及一个 Class 引用组成。 Class 引用指向当前方法在运行时常量池中对应的 Class。
+    - contentinfo [ref=e326]:
+      - generic [ref=e327]: 默认页脚
+      - generic [ref=e328]: Copyright © 2023 杨景

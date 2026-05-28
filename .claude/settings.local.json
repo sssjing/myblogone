@@ -29,7 +29,8 @@
       "Bash(grep -oP '读书笔记\",\"icon\":\"book\",\"link\":\"[^\"]*\"},\\\\{\"text\":\"分类' \"C:\\\\Users\\\\yangjing33\\\\Downloads\\\\myblogone-master\\\\myblogone-master\\\\assets\\\\app-beffe7bc.js\")",
       "mcp__playwright__browser_click",
       "mcp__playwright__browser_wait_for",
-      "mcp__playwright__browser_run_code_unsafe"
+      "mcp__playwright__browser_run_code_unsafe",
+      "Bash(find . -name \"*.html\" -path \"*学透Spring*\" -exec grep -L \"ai-agent-inject\" {} \\\\;)"
     ]
   }
 }
