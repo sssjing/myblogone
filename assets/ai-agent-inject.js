@@ -45,7 +45,7 @@
     span.setAttribute("aria-label", "AI Agent");
     span.style.cursor = "pointer";
     span.innerHTML = '<span class="font-icon icon iconfont icon-category" style=""></span>AI Agent';
-    span.onclick = function() { window.location.href = "/myblogone/posts/ai-agent/"; };
+    span.onclick = function() { window.location.href = "/myblogone/posts/ai-agent/?v=" + Date.now(); };
     return span;
   }
 
