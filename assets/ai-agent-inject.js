@@ -1,14 +1,32 @@
 (function() {
   "use strict";
 
-  // Ensure all AI Agent links bypass VuePress SPA routing (full page nav only)
+  // CRITICAL: Immediately convert AI Agent nav link from <a> to <span>
+  // to prevent Vue Router from intercepting clicks and showing 404.
+  // Use mousedown (fires before click) for maximum reliability.
+  document.addEventListener("mousedown", function(e) {
+    var el = e.target;
+    // Walk up the DOM tree to find the AI Agent link
+    while (el && el !== document.body) {
+      if (el.tagName === "A" && el.getAttribute("href") && el.getAttribute("href").indexOf("posts/ai-agent/") !== -1) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        window.location.href = el.getAttribute("href");
+        return;
+      }
+      el = el.parentElement;
+    }
+  }, true);
+
+  // Backup: also intercept click event
   document.addEventListener("click", function(e) {
     var link = e.target.closest('a[href*="posts/ai-agent/"]');
     if (link) {
       e.preventDefault();
       e.stopPropagation();
       e.stopImmediatePropagation();
-      window.location.href = link.getAttribute("href") || "/myblogone/posts/ai-agent/";
+      window.location.href = link.getAttribute("href");
     }
   }, true);
 
@@ -86,28 +104,28 @@
 
   function run() { fixNavLink(); injectArticles(); }
 
-  // Run multiple times to handle hydration timing
-  setTimeout(run, 800);
-  setTimeout(run, 2000);
-  setTimeout(run, 4000);
+  // Run multiple times to handle initial hydration timing
+  setTimeout(run, 500);
+  setTimeout(run, 1500);
+  setTimeout(run, 3500);
 
-  // MutationObserver catches SPA navigations that replace the navbar
+  // MutationObserver: IMMEDIATELY fix AI Agent nav link on every DOM change.
+  // This is critical - any delay means Vue Router can intercept the click.
   var app = document.querySelector("#app");
   if (app) {
-    var observer = new MutationObserver(function(mutations) {
-      // Only act if navbar/article-list changed
-      for (var i = 0; i < mutations.length; i++) {
-        var m = mutations[i];
-        if (m.target && m.target.className &&
-            (m.target.className.indexOf("nav-links") !== -1 ||
-             m.target.id === "article-list" ||
-             (m.target.className.indexOf && m.target.className.indexOf("navbar") !== -1))) {
-          run();
-          return;
-        }
+    var ticking = false;
+    var observer = new MutationObserver(function() {
+      if (!ticking) {
+        ticking = true;
+        // Use microtask for near-instant execution
+        Promise.resolve().then(function() {
+          fixNavLink();
+          injectArticles();
+          ticking = false;
+        });
+        // Also fix synchronously for the nav link (critical path)
+        fixNavLink();
       }
-      // Fallback: always try
-      run();
     });
     observer.observe(app, { childList: true, subtree: true });
   }
