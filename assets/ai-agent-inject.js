@@ -20,21 +20,39 @@
   ];
 
   function injectNavLink() {
-    // Add AI Agent nav link to navbar if missing
-    const navLinks = document.querySelector(".nav-links");
+    // Ensure AI Agent nav link bypasses VuePress SPA routing
+    var navLinks = document.querySelector(".nav-links");
     if (!navLinks) return;
-    // Check if AI Agent link already exists
-    const existing = navLinks.querySelector('a[href*="ai-agent"]');
-    if (existing) return;
-    // Find "分类" link to insert before it
-    const categoryLink = navLinks.querySelector('a[href*="/category"]');
+    var aiLink = navLinks.querySelector('a[href*="ai-agent"]');
+    if (aiLink) {
+      // Fix existing link: remove SPA behavior by replacing with force-navigation
+      if (!aiLink.dataset.fixed) {
+        aiLink.dataset.fixed = "1";
+        aiLink.addEventListener("click", function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          e.stopImmediatePropagation();
+          window.location.href = "/myblogone/posts/ai-agent/";
+        }, true);
+      }
+      return;
+    }
+    // If VuePress didn't render it, create a new nav item
+    var categoryLink = navLinks.querySelector('a[href*="/category"]');
     if (!categoryLink) return;
-    const categoryItem = categoryLink.closest(".nav-item");
+    var categoryItem = categoryLink.closest(".nav-item");
     if (!categoryItem) return;
-    // Create AI Agent nav item
-    const navItem = document.createElement("div");
+    var navItem = document.createElement("div");
     navItem.className = "nav-item hide-in-mobile";
-    navItem.innerHTML = '<a href="/myblogone/posts/ai-agent/" class="nav-link" aria-label="AI Agent"><span class="font-icon icon iconfont icon-category" style=""></span>AI Agent</a>';
+    navItem.innerHTML = '<a href="/myblogone/posts/ai-agent/" class="nav-link" aria-label="AI Agent" data-fixed="1"><span class="font-icon icon iconfont icon-category" style=""></span>AI Agent</a>';
+    // Add force-navigation click handler
+    var link = navItem.querySelector("a");
+    link.addEventListener("click", function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+      window.location.href = "/myblogone/posts/ai-agent/";
+    }, true);
     categoryItem.parentNode.insertBefore(navItem, categoryItem);
   }
 
