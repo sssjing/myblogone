@@ -25,27 +25,45 @@
     if (aiAgentFixed) return;
     var navLinks = document.querySelector(".nav-links");
     if (!navLinks) return;
+
+    // Check if VuePress rendered our AI Agent link (it may have it from bundle config, or not)
     var aiLink = navLinks.querySelector('a[href*="ai-agent"]');
-    if (!aiLink) return;
-    // Replace the entire nav item with a native link that bypasses Vue SPA
-    var navItem = aiLink.closest(".nav-item");
-    if (!navItem || navItem.dataset.fixed === "1") return;
-    navItem.dataset.fixed = "1";
+    if (aiLink) {
+      var navItem = aiLink.closest(".nav-item");
+      if (navItem && navItem.dataset.fixed !== "1") {
+        navItem.dataset.fixed = "1";
+        aiAgentFixed = true;
+        // Replace <a> with <span> to completely bypass Vue Router click interception
+        var span = document.createElement("span");
+        span.className = "nav-link";
+        span.setAttribute("aria-label", "AI Agent");
+        span.style.cursor = "pointer";
+        span.innerHTML = '<span class="font-icon icon iconfont icon-category" style=""></span>AI Agent';
+        span.onclick = function() { window.location.href = "/myblogone/posts/ai-agent/"; };
+        aiLink.parentNode.replaceChild(span, aiLink);
+      }
+      return;
+    }
+
+    // Check if we already injected our custom nav item
+    if (navLinks.querySelector('[data-ai-agent="1"]')) return;
     aiAgentFixed = true;
-    // Replace innerHTML with a native <a> that has onclick for force-navigation
-    var newLink = document.createElement("a");
-    newLink.href = "/myblogone/posts/ai-agent/";
-    newLink.className = "nav-link";
-    newLink.setAttribute("aria-label", "AI Agent");
-    newLink.innerHTML = '<span class="font-icon icon iconfont icon-category" style=""></span>AI Agent';
-    newLink.onclick = function(e) {
+
+    // Create a new nav item before "分类"
+    var categoryLink = navLinks.querySelector('a[href*="/category"]');
+    if (!categoryLink) return;
+    var categoryItem = categoryLink.closest(".nav-item");
+    if (!categoryItem) return;
+
+    var navItem = document.createElement("div");
+    navItem.className = "nav-item hide-in-mobile";
+    navItem.setAttribute("data-ai-agent", "1");
+    // Use <span> not <a> to avoid Vue Router interception
+    navItem.innerHTML = '<span class="nav-link" aria-label="AI Agent" style="cursor:pointer"><span class="font-icon icon iconfont icon-category" style=""></span>AI Agent</span>';
+    navItem.querySelector("span.nav-link").onclick = function() {
       window.location.href = "/myblogone/posts/ai-agent/";
-      return false;
     };
-    newLink.style.cursor = "pointer";
-    // Clear nav item and insert new link
-    navItem.innerHTML = "";
-    navItem.appendChild(newLink);
+    categoryItem.parentNode.insertBefore(navItem, categoryItem);
   }
 
   function inject() {
