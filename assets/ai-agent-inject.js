@@ -1,4 +1,14 @@
 (function() {
+  // Force full page navigation for AI Agent links (bypass VuePress SPA router)
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href*="posts/ai-agent/"]');
+    if (link && link.href.indexOf('posts/ai-agent/') !== -1) {
+      e.preventDefault();
+      e.stopPropagation();
+      window.location.href = link.href;
+    }
+  }, true);
+
   // Wait for VuePress hydration to complete, then ensure AI Agent articles + nav link are visible
   const AI_ARTICLES = [
     { href: "/myblogone/posts/ai-agent/interview-guide.html", title: "AI Agent 面经与面试题", excerpt: "高频面试题整理：Agent 与 Chatbot 的区别、RAG vs Fine-tuning 选择、Function Calling 原理、Multi-Agent 优缺点、Agent 安全性问题、评估方法等核心知识点。", time: "15 分钟" },
